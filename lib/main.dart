@@ -1,12 +1,9 @@
-import 'package:ataa/constant.dart';
-import 'package:ataa/features/splash/presentation/views/splash_view.dart';
+import 'package:Basera/core/utility/theme.dart';
+import 'package:Basera/features/Auth/presentation/views/login_view.dart';
 import 'package:flutter/material.dart';
-
 import 'core/utility/size_config.dart';
 
-
-void main(){
-
+void main() {
   runApp(const MyApp());
 }
 
@@ -15,13 +12,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final brightness = View.of(context).platformDispatcher.platformBrightness;
+
+    MaterialTheme theme = const MaterialTheme();
     SizeConfig.init(context);
-    return  MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: kSurface
-      ),
+    return MaterialApp(
+      theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       debugShowCheckedModeBanner: false,
-      home: const SplashView(),
+      home: const LoginView(),
+      builder: (context, child) {
+        return Directionality(
+          textDirection: TextDirection.rtl,
+          child: child!,
+        );
+      },
     );
   }
 }

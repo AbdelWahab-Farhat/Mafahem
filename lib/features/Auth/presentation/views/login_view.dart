@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/home_view_body.dart';
+import 'widgets/login_view_body.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class LoginView extends StatelessWidget {
+  const LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const HomeViewBody();
+    return const LoginViewBody();
   }
 }

@@ -1,14 +1,13 @@
-import 'package:ataa/features/splash/presentation/views/widgets/custom_app_title.dart';
+import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/splash/presentation/views/widgets/custom_app_title.dart';
 import 'package:flutter/material.dart';
-import '../../../../home/presentation/views/home_view.dart';
-
+import '../../../../../core/utility/helper.dart';
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
-
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 2)),
+      future: Future.delayed(const Duration(seconds: 2),() => push(context, const LoginView()),),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Scaffold(
@@ -27,7 +26,7 @@ class SplashViewBody extends StatelessWidget {
             ),
           );
         }
-        return const HomeView();
+        return const SizedBox();
       },
     );
   }

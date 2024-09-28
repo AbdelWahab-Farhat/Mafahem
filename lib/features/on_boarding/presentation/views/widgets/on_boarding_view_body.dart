@@ -1,35 +1,93 @@
-import 'package:ataa/features/Auth/presentation/views/login_view.dart';
-import 'package:ataa/features/splash/presentation/views/widgets/custom_app_title.dart';
+import 'package:Basera/core/utility/helper.dart';
+import 'package:Basera/core/widgets/custom_filled_button.dart';
+import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/on_boarding/presentation/views/widgets/custom_page_item.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utility/helper.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingViewBody extends StatelessWidget {
+class OnBoardingViewBody extends StatefulWidget {
   const OnBoardingViewBody({super.key});
 
   @override
+  State<OnBoardingViewBody> createState() => _OnBoardingViewBodyState();
+}
+
+class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
+  String btnTitle = 'التالي';
+  final controller = PageController();
+  int count = 2;  // Total number of pages
+
+  @override
+  void initState() {
+    super.initState();
+    controller.addListener(() {
+      int currentPage = controller.page?.round() ?? 0;
+      if (currentPage == count - 1) {
+        setState(() {
+          btnTitle = 'أبدا';
+        });
+      } else {
+        setState(() {
+          btnTitle = 'التالي';
+        });
+      }
+    });
+  }
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 2),() => push(context, const LoginView()),),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
-            body: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'lib/assets/images/logo-test.png',
-                    width: 189.02,
-                    height: 120.97,
-                  ),
-                  const CustomAppTitle(),
-                ],
-              ),
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: PageView(
+              controller: controller,
+              children: const [
+                CustomPageItem(
+                    title: 'معا للعطاء',
+                    content:
+                    'تسهيل العطاء والخير عبر التكنولوجيا، حيث يجمع بين الأفراد الذين يرغبون في تقديم الدعم والمساعدات مع المحتاجين.',
+                    imageUrl: 'lib/assets/images/onboarding1.png'),
+                CustomPageItem(
+                    title: 'أكفال للمساكين',
+                    content:
+                    'هنا لنساعدك في تقديم الدعم والمساعدة لمن هم في حاجة في “عطاء” , نسعى لتوفير موارد وخدمات تساعد المساكين في تحسين حياتهم.',
+                    imageUrl: 'lib/assets/images/onboarding2.png'),
+              ],
             ),
-          );
-        }
-        return const SizedBox();
-      },
+          ),
+          SmoothPageIndicator(
+            controller: controller,
+            count: count,
+            effect:  WormEffect(activeDotColor: Theme.of(context).colorScheme.primary),
+          ),
+          const SizedBox(
+            height: 64,
+          ),
+          CustomFilledButton(
+            color: Theme.of(context).colorScheme.primary,
+            title: btnTitle,
+            onPressed: () {
+              if (controller.page?.round() == count - 1) {
+                pushAndRemoveUntil(context, const LoginView());
+              } else {
+                // Navigate to the next page
+                controller.nextPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut);
+              }
+            },
+          ),
+          const SizedBox(
+            height: 64,
+          ),
+        ],
+      ),
     );
   }
 }

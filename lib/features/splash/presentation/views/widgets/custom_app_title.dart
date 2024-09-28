@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../../../constant.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomAppTitle extends StatelessWidget {
   const CustomAppTitle({super.key});
@@ -9,24 +8,21 @@ class CustomAppTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
         text: TextSpan(children: [
-      const TextSpan(
-        text: 'عَ',
+      TextSpan(
+        text: 'مفا',
         style: TextStyle(
-          fontFamily: kFontFamily,
-            fontSize: 62, fontWeight: FontWeight.bold, color: Colors.black),
+            fontSize: 40,
+            fontWeight: FontWeight.bold,
+            fontFamily: GoogleFonts.changa().fontFamily,
+            color: Theme.of(context).colorScheme.primary),
       ),
       TextSpan(
-        text: 'طَـا',
-        style: TextStyle(
-            fontFamily: kFontFamily,
-            fontSize: 62, fontWeight: FontWeight.bold, color: kPrimary),
-      ),
-       const TextSpan(
-        text: 'ءٌ',
-        style: TextStyle(
-          fontFamily: kFontFamily,
-            fontSize: 62, fontWeight: FontWeight.bold, color: Colors.black),
-      ),
+          text: 'هيم',
+          style: TextStyle(
+              fontSize: 40,
+              fontWeight: FontWeight.bold,
+              fontFamily: GoogleFonts.changa().fontFamily,
+              color: Theme.of(context).colorScheme.secondary)),
     ]));
   }
 }
