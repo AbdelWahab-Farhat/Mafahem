@@ -18,12 +18,11 @@ class CategoriesSection extends StatelessWidget {
         SizedBox(
           width: SizeConfig.screenWidth,
           height: 60,
-          child: ListView(
-            padding: const EdgeInsets.only(right: 20,),
+          child: ListView.builder(
+            padding: const EdgeInsets.only(right: 20,bottom: 5),
             scrollDirection: Axis.horizontal,
-            children: [
-              CustomActionChip(label: 'العلوم الطبية',onPressed: () {},),
-            ],
+            itemCount: 10,
+            itemBuilder: (context, index) =>  CustomActionChip(label: 'العلوم الطبية',onPressed: () {},),
           ),
         ),
       ],
