@@ -41,7 +41,7 @@ abstract class Styles {
     return TextStyle(
         fontFamily: GoogleFonts.cairo().fontFamily,
         fontSize: 16,
-        color: Theme.of(context).colorScheme.secondary,
+        color: Theme.of(context).colorScheme.onSurface,
         fontWeight: FontWeight.normal);
   }
 
