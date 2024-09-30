@@ -1,5 +1,5 @@
 import 'package:Basera/core/utility/theme.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'core/utility/size_config.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       debugShowCheckedModeBanner: false,
-      home: const LoginView(),
+      home: const HomeView(),
       builder: (context, child) {
         return Directionality(
           textDirection: TextDirection.rtl,
