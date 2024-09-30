@@ -9,6 +9,9 @@ class CustomFilledButton extends StatelessWidget {
   final double height;
   final double radius;
   final Color color;
+  final Color? textColor;
+  final double fontSize;
+  final FontWeight fontWeight;
   const CustomFilledButton({
     super.key,
     required this.title,
@@ -17,6 +20,9 @@ class CustomFilledButton extends StatelessWidget {
     this.height = 50,
     this.radius = 8,
     this.color = Colors.blue,
+    this.textColor,
+    this.fontSize = 20,
+    this.fontWeight = FontWeight.bold
   });
 
   @override
@@ -38,7 +44,7 @@ class CustomFilledButton extends StatelessWidget {
             child: Text(
               textAlign: TextAlign.center,
               title,
-              style: Styles.style20(context),
+              style: Styles.style20(context).copyWith(color:textColor ?? Theme.of(context).colorScheme.onSurface,fontSize: fontSize,fontWeight: fontWeight),
             ),
           )),
     );
