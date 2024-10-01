@@ -2,6 +2,7 @@ import 'package:Basera/core/utility/helper.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/features/cart/presentation/views/cart_view.dart';
+import 'package:Basera/features/notification/presentation/views/notification_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,11 +48,11 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         IconButton(
-            onPressed: () {}, icon: SvgPicture.asset('lib/assets/icons/notification.svg',height: 25,width: 25,color: Theme.of(context).colorScheme.onSurface,)),
+            onPressed: () => push(context, const NotificationView()), icon: SvgPicture.asset('lib/assets/icons/notification.svg',height: 25,width: 25,color: Theme.of(context).colorScheme.onSurface,)),
         IconButton(
             onPressed: () => push(context, const CartView()), icon: SvgPicture.asset('lib/assets/icons/cart.svg',height: 25,width: 25,color: Theme.of(context).colorScheme.onSurface,)),
       ],
-      shape:  LinearBorder(side:  BorderSide(width: 0.2,color: Theme.of(context).colorScheme.onSurface),bottom: LinearBorderEdge()),
+      shape:  LinearBorder(side:  BorderSide(width: 0.2,color: Theme.of(context).colorScheme.onSurface),bottom: const LinearBorderEdge()),
     );
   }
   @override
