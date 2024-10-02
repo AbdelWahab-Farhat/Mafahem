@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
-void push(BuildContext context, Widget widget) {
+void push(BuildContext context, Widget widget ,{PageTransitionType pageTransitionType = PageTransitionType.fade}) {
   Navigator.push(
     context,
-    PageTransition(type: PageTransitionType.fade, child: widget),
+    PageTransition(type: pageTransitionType, child: widget),
   );
 }
 
