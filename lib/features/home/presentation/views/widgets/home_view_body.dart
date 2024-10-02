@@ -1,5 +1,6 @@
 import 'dart:developer';
 import 'dart:io';
+import 'package:Basera/core/utility/helper.dart';
 import 'package:Basera/core/widgets/custom_search_field.dart';
 import 'package:Basera/features/home/presentation/views/widgets/categories_section.dart';
 import 'package:Basera/features/home/presentation/views/widgets/custom_carouse_slider.dart';
@@ -7,6 +8,7 @@ import 'package:Basera/features/home/presentation/views/widgets/home_app_bar.dar
 import 'package:Basera/features/home/presentation/views/widgets/most_ordered_list_view.dart';
 import 'package:Basera/features/home/presentation/views/widgets/section_title.dart';
 import 'package:Basera/features/home/presentation/views/widgets/work_shop_section.dart';
+import 'package:Basera/features/search/views/search_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -30,6 +32,7 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: CustomSearchField(
+                  onTap: () => push(context, const SearchView()),
                   hintText: 'ابحث..',
                   icon: Container(
                       decoration: BoxDecoration(
