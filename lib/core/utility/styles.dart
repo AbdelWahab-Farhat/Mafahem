@@ -36,6 +36,13 @@ abstract class Styles {
         color: Theme.of(context).colorScheme.onPrimary,
         fontWeight: FontWeight.bold);
   }
+  static TextStyle style18(BuildContext context) {
+    return TextStyle(
+        fontFamily: GoogleFonts.changa().fontFamily,
+        fontSize: 18,
+        color: Theme.of(context).colorScheme.onSurface,
+        fontWeight: FontWeight.w600);
+  }
 
   static TextStyle style16(BuildContext context) {
     return TextStyle(
