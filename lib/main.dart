@@ -1,5 +1,6 @@
 import 'package:Basera/core/utility/theme.dart';
 import 'package:Basera/features/home/presentation/views/home_view.dart';
+import 'package:Basera/features/on_boarding/presentation/views/on_boarding.dart';
 import 'package:flutter/material.dart';
 import 'core/utility/size_config.dart';
 
