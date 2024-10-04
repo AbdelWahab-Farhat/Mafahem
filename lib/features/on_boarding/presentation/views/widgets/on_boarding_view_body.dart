@@ -1,4 +1,4 @@
-import 'package:Basera/core/utility/helper.dart';
+import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
 import 'package:Basera/features/on_boarding/presentation/views/widgets/custom_page_item.dart';

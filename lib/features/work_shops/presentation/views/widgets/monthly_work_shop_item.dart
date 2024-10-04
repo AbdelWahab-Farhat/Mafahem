@@ -1,5 +1,4 @@
 import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/work_shops_view_body.dart';
 import 'package:flutter/material.dart';
 
 import 'package:Basera/core/utility/styles.dart';
