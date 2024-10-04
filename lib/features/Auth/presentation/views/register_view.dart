@@ -1,4 +1,6 @@
+import 'package:Basera/features/Auth/presentation/manager/register_cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'widgets/register_view_body.dart';
 
 class RegisterView extends StatelessWidget {
@@ -6,6 +8,9 @@ class RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const RegisterViewBody();
+    return BlocProvider(
+      create: (context) => RegisterCubit(),
+      child: const RegisterViewBody(),
+    );
   }
 }
