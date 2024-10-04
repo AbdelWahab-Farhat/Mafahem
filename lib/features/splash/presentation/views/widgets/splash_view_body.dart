@@ -1,7 +1,7 @@
+import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
 import 'package:Basera/features/splash/presentation/views/widgets/custom_app_title.dart';
 import 'package:flutter/material.dart';
-import '../../../../../core/utility/helper.dart';
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
   @override

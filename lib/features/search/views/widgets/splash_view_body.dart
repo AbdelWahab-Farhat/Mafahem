@@ -1,4 +1,3 @@
-import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/widgets/custom_app_bar.dart';
 import 'package:Basera/features/search/views/widgets/search_grid_item.dart';
 import 'package:Basera/features/search/views/widgets/search_section.dart';
