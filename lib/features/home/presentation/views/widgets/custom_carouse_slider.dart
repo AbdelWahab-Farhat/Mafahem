@@ -1,4 +1,4 @@
-import 'package:Basera/core/utility/helper.dart';
+import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/features/Course/presentation/views/course_view.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
