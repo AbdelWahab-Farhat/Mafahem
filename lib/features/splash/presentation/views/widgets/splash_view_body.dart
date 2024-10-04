@@ -1,16 +1,11 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/core/widgets/custom_loading_widget.dart';
 import 'package:Basera/features/splash/presentation/views/widgets/custom_app_title.dart';
 import 'package:flutter/material.dart';
 class SplashViewBody extends StatelessWidget {
   const SplashViewBody({super.key});
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: Future.delayed(const Duration(seconds: 2),() => push(context, const LoginView()),),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
+    return Scaffold(
             body: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -21,13 +16,14 @@ class SplashViewBody extends StatelessWidget {
                     height: 120.97,
                   ),
                   const CustomAppTitle(),
+                  const SizedBox(
+                    height: 32,
+                  ),
+                  const CustomLoadingWidget(),
                 ],
               ),
             ),
           );
         }
-        return const SizedBox();
-      },
-    );
-  }
-}
+      }
+
