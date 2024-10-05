@@ -1,10 +1,9 @@
-
-import 'dart:developer';
-
 import 'package:Basera/core/dependency_injection.dart';
 import 'package:Basera/core/utility/theme.dart';
 import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/Auth/presentation/views/auth_guard.dart';
+import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/home/presentation/views/home_view.dart';
+import 'package:Basera/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/utility/size_config.dart';
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         theme: brightness == Brightness.light ? theme.light() : theme.dark(),
         debugShowCheckedModeBanner: false,
-        home: const AuthGuard(),
+        home: const ProfileView(),
         builder: (context, child) {
           return Directionality(
             textDirection: TextDirection.rtl,
