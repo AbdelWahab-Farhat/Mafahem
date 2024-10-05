@@ -35,9 +35,6 @@ class CustomIconButton extends StatelessWidget {
           shape: WidgetStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(radius),
-              side: BorderSide(
-                color: Theme.of(context).colorScheme.onSurface,
-              ),
             ),
           ),
         ),
