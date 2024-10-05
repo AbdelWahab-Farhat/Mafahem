@@ -29,12 +29,13 @@ class CustomTextField extends StatelessWidget {
         TextFormField(
           validator: validator,
           onSaved: onSaved,
+          style: Styles.style14(context),
           keyboardType:
           icon == null ? TextInputType.text : TextInputType.number,
           obscureText: icon == null ? false : true,
           decoration: InputDecoration(
             errorStyle: Styles.style12(context).copyWith(color: Theme.of(context).colorScheme.error),
-            fillColor: Colors.white,
+            fillColor: Theme.of(context).colorScheme.onPrimary,
             filled: true,
             enabledBorder: Styles.setOutlinedBorder(context),
             errorBorder: Styles.setOutlinedBorder(context , isErrorBorder:  true),
