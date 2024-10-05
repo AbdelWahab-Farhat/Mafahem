@@ -1,7 +1,6 @@
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -28,11 +27,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             style: ButtonStyle(
               backgroundColor:WidgetStateProperty.all(Theme.of(context).colorScheme.onSurface),
             ),
-            iconSize: 20,
-            icon: SvgPicture.asset(
-              'lib/assets/icons/back-arrow.svg',
-              fit: BoxFit.scaleDown,
-            ),
+            iconSize: 25,
+            icon: Icon(Icons.arrow_back_ios_new, color: Theme.of(context).colorScheme.surface,),
             onPressed: () {
               Navigator.of(context).pop();
             },
