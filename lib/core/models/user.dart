@@ -9,7 +9,7 @@ class User {
   final bool? status;
   final String? message;
   final Data? data;
-  final String? token;
+  String? token;
 
   factory User.fromJson(Map<String, dynamic> json) {
     return User(
