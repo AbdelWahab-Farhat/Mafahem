@@ -12,7 +12,7 @@ class CustomPageItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 32),
+      padding: const EdgeInsets.symmetric(horizontal: 42),
       child: Column(
         children: [
           const SizedBox(height: 82,),
@@ -20,8 +20,9 @@ class CustomPageItem extends StatelessWidget {
             imageUrl,
             fit: BoxFit.cover,
             width: double.infinity,
-            height: 386,
+            height: 300,
           ),
+           const SizedBox(height: 64,),
            OnBoardingContent(
             title: title,
             content:content,
