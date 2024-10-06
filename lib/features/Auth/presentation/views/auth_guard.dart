@@ -1,9 +1,9 @@
-import 'dart:async'; // Add this import for Future.delayed
+import 'dart:async';
+import 'package:Basera/features/root/presentation/views/root_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
-import 'package:Basera/features/home/presentation/views/home_view.dart';
 import 'package:Basera/features/splash/presentation/views/splash_view.dart';
 
 class AuthGuard extends StatefulWidget {
@@ -34,13 +34,13 @@ class _AuthGuardState extends State<AuthGuard> {
 
   Widget _buildView(BuildContext context, TokenState state) {
     if (state is TokenLoading) {
-      return const SplashView(); // Splash screen will show while loading
+      return const SplashView();
     } else if (state is TokenAuthenticated) {
-      return const HomeView(); // Show home view if authenticated
+      return const RootView();
     } else if (state is TokenUnauthenticated) {
-      return const LoginView(); // Show login view if unauthenticated
+      return const LoginView();
     } else {
-      return const SplashView(); // Fallback splash screen
+      return const SplashView();
     }
   }
 }
