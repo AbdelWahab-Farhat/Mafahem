@@ -32,7 +32,7 @@ class TokenService {
         var dio = GetIt.instance.get<Dio>();
 
         var res = await dio.get(
-          Routes.USER_BY_TOKEN,
+          Routes.USER_BY_TOKEN_URL,
           options: Options(
             headers: {
               'Authorization': 'Bearer $token',
@@ -40,7 +40,9 @@ class TokenService {
           ),
         );
         if (res.statusCode == HttpStatus.ok) {
-          return right(User.fromJson(res.data));
+          User user = User.fromJson(res.data);
+          user.token = token;
+          return right(user);
         } else {
           return left(ServerFailure(message: res.statusMessage ?? "حدث خطأ ما"));
         }
