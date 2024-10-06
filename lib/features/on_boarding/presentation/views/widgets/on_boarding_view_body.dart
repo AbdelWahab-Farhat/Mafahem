@@ -1,8 +1,10 @@
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/on_boarding/presentation/manager/onboarding_cubit.dart';
 import 'package:Basera/features/on_boarding/presentation/views/widgets/custom_page_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingViewBody extends StatefulWidget {
@@ -13,74 +15,44 @@ class OnBoardingViewBody extends StatefulWidget {
 }
 
 class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
-  String btnTitle = 'التالي';
-  final controller = PageController();
-  int count = 2;  // Total number of pages
 
   @override
   void initState() {
     super.initState();
-    controller.addListener(() {
-      int currentPage = controller.page?.round() ?? 0;
-      if (currentPage == count - 1) {
-        setState(() {
-          btnTitle = 'أبدا';
-        });
-      } else {
-        setState(() {
-          btnTitle = 'التالي';
-        });
-      }
-    });
+    context.read<OnboardingCubit>().changeTitleDependsOnPage();
   }
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
+
 
   @override
   Widget build(BuildContext context) {
+    var onBoardingCubit = context.read<OnboardingCubit>();
     return Scaffold(
       body: Column(
         children: [
           Expanded(
             child: PageView(
-              controller: controller,
-              children: const [
-                CustomPageItem(
-                    title: 'معا للعطاء',
-                    content:
-                    'تسهيل العطاء والخير عبر التكنولوجيا، حيث يجمع بين الأفراد الذين يرغبون في تقديم الدعم والمساعدات مع المحتاجين.',
-                    imageUrl: 'lib/assets/images/onboarding1.png'),
-                CustomPageItem(
-                    title: 'أكفال للمساكين',
-                    content:
-                    'هنا لنساعدك في تقديم الدعم والمساعدة لمن هم في حاجة في “عطاء” , نسعى لتوفير موارد وخدمات تساعد المساكين في تحسين حياتهم.',
-                    imageUrl: 'lib/assets/images/onboarding2.png'),
-              ],
+              controller: onBoardingCubit.controller,
+              children:onBoardingCubit.items
             ),
           ),
           SmoothPageIndicator(
-            controller: controller,
-            count: count,
-            effect:  WormEffect(activeDotColor: Theme.of(context).colorScheme.primary),
+            controller: onBoardingCubit.controller,
+            count: onBoardingCubit.count,
+            effect: WormEffect(
+                activeDotColor: Theme.of(context).colorScheme.primary),
           ),
           const SizedBox(
             height: 64,
           ),
-          CustomFilledButton(
-            color: Theme.of(context).colorScheme.primary,
-            title: btnTitle,
-            onPressed: () {
-              if (controller.page?.round() == count - 1) {
-                pushAndRemoveUntil(context, const LoginView());
-              } else {
-                // Navigate to the next page
-                controller.nextPage(
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.easeInOut);
-              }
+          BlocBuilder<OnboardingCubit, OnboardingState>(
+            builder: (context, state) {
+              return CustomFilledButton(
+                color: Theme.of(context).colorScheme.primary,
+                title: onBoardingCubit.buttonTitle,
+                onPressed: () {
+                  onBoardingCubit.navigateTo(context);
+                },
+              );
             },
           ),
           const SizedBox(
