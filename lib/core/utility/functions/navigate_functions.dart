@@ -24,7 +24,7 @@ void pushAndRemoveUntil(BuildContext context, Widget widget) {
   Navigator.pushAndRemoveUntil(
     context,
     PageTransition(
-        type: PageTransitionType.scale,
+        type: PageTransitionType.fade,
         child: widget,
         duration: const Duration(milliseconds: 1000),
         alignment: Alignment.center),
