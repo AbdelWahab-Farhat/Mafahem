@@ -24,7 +24,7 @@ class LoginViewBody extends StatelessWidget {
                   child: Column(
                     textDirection: TextDirection.rtl,
                     children: [
-                      SizedBox(height: 86,),
+                      const SizedBox(height: 86,),
                       const LogoTitle(
                         title: 'تسجيل الدخول',
                       ),
