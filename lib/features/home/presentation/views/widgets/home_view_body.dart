@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
       appBar: const HomeAppBar(),
       body: RefreshIndicator(
         onRefresh: () async {
-          log("hello",name: "fuck");
+
         },
         child: SingleChildScrollView(
           physics: Platform.isIOS ? const BouncingScrollPhysics() : const ClampingScrollPhysics(),
