@@ -1,12 +1,10 @@
-
-
 import 'package:Basera/core/models/learn_path.dart';
 
-class CalculateLearnPathService {
+class CalculateRoadMapService {
 
-  static double calculateLearnPath(LearnPath path) {
+  static double calculateLearnPath(RoadMap roadMap) {
     double totalPrice = 0;
-      for (var course in path.courses) {
+      for (var course in roadMap.courses) {
         totalPrice += double.parse(course.price);
     }
     double discount  = totalPrice * 0.2;
