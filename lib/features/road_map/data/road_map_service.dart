@@ -3,20 +3,20 @@ import 'dart:io';
 
 import 'package:Basera/core/apis/routes.dart';
 import 'package:Basera/core/error/failure.dart';
-import 'package:Basera/core/models/learn_path.dart';
+import 'package:Basera/core/models/road_map.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
-class LearningPathService {
+class RoadMapService {
   final Dio dio;
-  LearningPathService({required this.dio});
+  RoadMapService({required this.dio});
 
-  Future<Either<Failure, List<LearnPath>>> fetchLearnPaths() async {
+  Future<Either<Failure, List<RoadMap>>> fetchLearnPaths() async {
     try {
       var res = await dio.get(Routes.ROAD_MAPS_URL);
       if (res.statusCode == HttpStatus.ok) {
-        List<LearnPath> paths = List<LearnPath>.from(
-            res.data['data'].map((item) => LearnPath.fromJson(item)).toList()
+        List<RoadMap> paths = List<RoadMap>.from(
+            res.data['data'].map((item) => RoadMap.fromJson(item)).toList()
         );
         return right(paths);
       } else {

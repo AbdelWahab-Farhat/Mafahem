@@ -3,8 +3,8 @@ class SubscriptionPlan {
   final String name;
   final String price;
   final int duration;
-  final DateTime createdAt;
-  final DateTime updatedAt;
+  final String createdAt;
+  final String updatedAt;
 
   SubscriptionPlan({
     required this.id,
@@ -21,8 +21,8 @@ class SubscriptionPlan {
       name: json['name'],
       price: json['price'],
       duration: json['duration'],
-      createdAt: DateTime.parse(json['created_at']),
-      updatedAt: DateTime.parse(json['updated_at']),
+      createdAt: json['created_at'],
+      updatedAt: json['updated_at'],
     );
   }
 
@@ -32,8 +32,8 @@ class SubscriptionPlan {
       'name': name,
       'price': price,
       'duration': duration,
-      'created_at': createdAt.toIso8601String(),
-      'updated_at': updatedAt.toIso8601String(),
+      'created_at': createdAt,
+      'updated_at': updatedAt,
     };
   }
 }

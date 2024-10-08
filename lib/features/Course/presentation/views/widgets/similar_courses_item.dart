@@ -1,5 +1,5 @@
 import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/rate_widget.dart';
+import 'package:Basera/core/widgets/rate_widget.dart';
 import 'package:flutter/material.dart';
 
 class SimilarCoursesItem extends StatelessWidget {

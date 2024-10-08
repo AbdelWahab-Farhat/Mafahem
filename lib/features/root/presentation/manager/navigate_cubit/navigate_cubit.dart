@@ -1,6 +1,5 @@
 import 'package:Basera/features/home/presentation/views/home_view.dart';
-import 'package:Basera/features/learning_path/views/learning_path_view.dart';
-import 'package:Basera/features/profile/presentation/views/profile_view.dart';
+import 'package:Basera/features/road_map/views/road_map_view.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +15,7 @@ class NavigateCubit extends Cubit<NavigateState> {
   List<Widget> views = [
     HomeView(),
     HomeView(),
-    LearningPathView(),
+    RoadMapView(),
     HomeView(),
 
   ];

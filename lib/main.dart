@@ -1,6 +1,9 @@
 import 'package:Basera/core/dependency_injection.dart';
 import 'package:Basera/core/utility/theme.dart';
 import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Basera/features/Auth/presentation/views/auth_guard.dart';
+import 'package:Basera/features/category/views/category_view.dart';
+import 'package:Basera/features/home/presentation/views/home_view.dart';
 import 'package:Basera/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:Basera/features/root/presentation/views/root_view.dart';
 import 'package:flutter/material.dart';

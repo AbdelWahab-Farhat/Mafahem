@@ -3,25 +3,29 @@ import 'package:flutter/material.dart';
 
 class CustomTagTextWidget extends StatelessWidget {
   final String text;
+  final Color? color;
 
   const CustomTagTextWidget({
     super.key,
     required this.text,
+    this.color,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:
-      const EdgeInsets.symmetric(horizontal: 10, vertical: 5), // مساحة داخلية
+      padding: const EdgeInsets.symmetric(
+          horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.white, width: 1.5), // إطار خارجي
-        borderRadius: BorderRadius.circular(16), // تدوير الحواف
+        border: Border.all(
+            color: color ?? Theme.of(context).colorScheme.surface,
+            width: 1.5),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Text(
         text,
         style: Styles.style14(context)
-            .copyWith(color: Theme.of(context).colorScheme.surface),
+            .copyWith(color: color ?? Theme.of(context).colorScheme.surface),
       ),
     );
   }

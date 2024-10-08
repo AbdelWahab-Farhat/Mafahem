@@ -1,4 +1,4 @@
-import 'package:Basera/core/models/learn_path.dart';
+import 'package:Basera/core/models/road_map.dart';
 
 class CalculateRoadMapService {
 

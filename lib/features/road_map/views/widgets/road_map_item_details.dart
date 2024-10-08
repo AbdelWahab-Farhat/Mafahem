@@ -1,13 +1,13 @@
 import 'package:Basera/features/learning_path/views/widgets/subtitle_and_Price.dart';
 import 'package:Basera/features/learning_path/views/widgets/title_and_rating.dart';
 import 'package:flutter/material.dart';
-class LearningPathDetails extends StatelessWidget {
+class RoadMapItemDetails extends StatelessWidget {
   final String title;
   final double rating;
   final String subtitle;
   final String price;
 
-  const LearningPathDetails({
+  const RoadMapItemDetails({
     required this.title,
     required this.rating,
     required this.subtitle,

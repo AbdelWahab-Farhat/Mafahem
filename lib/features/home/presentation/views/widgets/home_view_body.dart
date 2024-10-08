@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_search_field.dart';
