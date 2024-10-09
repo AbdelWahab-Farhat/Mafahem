@@ -29,10 +29,11 @@ class ProfileCardUpperRow extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Image.asset(
+            child: Image.network(
               image,
               fit: BoxFit.cover,
-            )),
+            )
+        ),
       ],
     );
   }
