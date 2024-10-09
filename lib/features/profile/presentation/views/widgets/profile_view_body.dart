@@ -1,4 +1,5 @@
 import 'package:Basera/features/profile/presentation/manager/toggle_profile_views_cubit/toggle_profile_views_cubit.dart';
+import 'package:Basera/features/profile/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:Basera/features/profile/presentation/views/my_certification_view.dart';
 import 'package:Basera/features/profile/presentation/views/my_course_view.dart';
 import 'package:Basera/features/profile/presentation/views/my_learning_path_view.dart';
@@ -9,9 +10,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 
-class ProfileViewBody extends StatelessWidget {
+class ProfileViewBody extends StatefulWidget {
   const ProfileViewBody({super.key});
 
+  @override
+  State<ProfileViewBody> createState() => _ProfileViewBodyState();
+}
+
+class _ProfileViewBodyState extends State<ProfileViewBody> {
+  @override
+  void initState() {
+    context.read<UserCubit>().getUserCourses();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     var toggleCubit = context.read<ToggleProfileViewsCubit>();
@@ -28,7 +39,7 @@ class ProfileViewBody extends StatelessWidget {
               child: PageView(
                 physics: const NeverScrollableScrollPhysics(),
                 controller: toggleCubit.controller,
-                children: [
+                children: const [
                   MyCourseView(),
                   MyLearningPathView(),
                   MyCertificationView(),
