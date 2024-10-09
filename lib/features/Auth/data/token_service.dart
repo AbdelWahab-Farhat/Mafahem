@@ -1,5 +1,5 @@
+import 'dart:developer';
 import 'dart:io';
-
 import 'package:Basera/core/apis/routes.dart';
 import 'package:Basera/core/error/failure.dart';
 import 'package:Basera/core/models/user.dart';
@@ -9,25 +9,24 @@ import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class TokenService {
-  // TODO: WE WILL USE IT IN LOGOUT
+  // Removes the stored token (used in logout)
   Future<void> removeToken() async {
     var prefs = await SharedPreferences.getInstance();
-    if (prefs.containsKey('token')) {
-      prefs.remove('token');
-    }
+    prefs.remove('token'); // No need to check if the key exists
   }
 
-  Future<void> saveToken(String token) async{
+  // Saves a token to SharedPreferences
+  Future<void> saveToken(String token) async {
     var prefs = await SharedPreferences.getInstance();
-    if (!prefs.containsKey('token')) {
-      prefs.setString('token',token);
-    }
+    prefs.setString('token', token); // Overwrites any existing token
   }
 
+  // Fetches user information based on the saved token
   Future<Either<Failure, User>> getUserByToken() async {
     try {
       var prefs = await SharedPreferences.getInstance();
       var token = prefs.getString('token');
+
       if (token != null && token.isNotEmpty) {
         var dio = GetIt.instance.get<Dio>();
 
@@ -36,6 +35,8 @@ class TokenService {
           options: Options(
             headers: {
               'Authorization': 'Bearer $token',
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
             },
           ),
         );
@@ -44,13 +45,18 @@ class TokenService {
           user.token = token;
           return right(user);
         } else {
-          return left(ServerFailure(message: res.statusMessage ?? "حدث خطأ ما"));
+          return left(ServerFailure(
+              message: res.statusMessage ?? "An unexpected error occurred"));
         }
       } else {
-        return left(ServerFailure(message: "لم يتم العثور على التوكن"));
+        return left(ServerFailure(message: "Token not found"));
       }
-    }on DioException catch (e) {
+    } on DioException catch (e) {
+      log(e.toString());
       return left(ServerFailure(message: e.message.toString()));
+    } catch (e) {
+      log(e.toString());
+      return left(ServerFailure(message: "An unexpected error occurred"));
     }
   }
-  }
+}
