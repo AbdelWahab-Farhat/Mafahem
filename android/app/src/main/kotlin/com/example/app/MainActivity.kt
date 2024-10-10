@@ -1,4 +1,4 @@
-package com.example.ataa
+package com.mafaheem.app
 
 import io.flutter.embedding.android.FlutterActivity
 
