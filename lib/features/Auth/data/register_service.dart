@@ -23,9 +23,13 @@ class RegisterService {
 
       if (res.statusCode == HttpStatus.ok || res.statusCode == HttpStatus.created) {
         return right(res.data['message']);
-      } else {
+      }
+      else if (res.statusCode == HttpStatus.badRequest) {
         return left(ServerFailure(
             message: res.data['data']['email'][0] ?? res.data['message'] ?? "Error, Try Again Later."));
+      } else {
+        return left(ServerFailure(
+            message: res.data['data'] ?? res.data['message'] ?? "Error, Try Again Later."));
       }
     } on DioException catch (e) {
       return left(ServerFailure(
