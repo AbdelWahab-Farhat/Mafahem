@@ -1,6 +1,4 @@
 import 'package:Basera/core/models/category.dart';
-import 'package:Basera/core/models/road_map.dart';
-import 'package:Basera/core/models/subscription_plan.dart';
 
 class Course {
   final int id;
@@ -14,11 +12,10 @@ class Course {
   final int duration;
   final String? whatYouWillLearn;
   final String? requirements;
-  final String createdAt;
-  final String updatedAt;
-  final Pivot pivot;
-  final List<Category> categories;
-  final SubscriptionPlan subscriptionPlan;
+  final String? createdAt;
+  final String? updatedAt;
+  final List<Category>? categories;
+  // final SubscriptionPlan subscriptionPlan;
 
   Course({
     required this.id,
@@ -34,9 +31,8 @@ class Course {
     this.requirements,
     required this.createdAt,
     required this.updatedAt,
-    required this.pivot,
     required this.categories,
-    required this.subscriptionPlan,
+    // required this.subscriptionPlan,
   });
 
   factory Course.fromJson(Map<String, dynamic> json) {
@@ -54,9 +50,8 @@ class Course {
       requirements: json['requirements'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at'],
-      pivot: Pivot.fromJson(json['pivot']),
-      categories: (json['categories'] as List).map((cat) => Category.fromJson(cat)).toList(),
-      subscriptionPlan: SubscriptionPlan.fromJson(json['subscription_plan']),
+      categories: json['categories'] == null ? [] : (json['categories'] as List).map((cat) => Category.fromJson(cat)).toList(),
+      // subscriptionPlan: SubscriptionPlan.fromJson(json['subscription_plan']),
     );
   }
 
@@ -75,9 +70,9 @@ class Course {
       'requirements': requirements,
       'created_at': createdAt,
       'updated_at': updatedAt,
-      'pivot': pivot.toJson(),
-      'categories': categories.map((cat) => cat.toJson()).toList(),
-      'subscription_plan': subscriptionPlan.toJson(),
+      // 'pivot': pivot.toJson(),
+      'categories': categories?.map((cat) => cat.toJson()).toList(),
+      // 'subscription_plan': subscriptionPlan.toJson(),
     };
   }
 }
