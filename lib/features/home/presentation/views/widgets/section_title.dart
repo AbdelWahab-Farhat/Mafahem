@@ -9,24 +9,16 @@ class SectionTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            title,
-            style: Styles.style16(context)
-                .copyWith(fontWeight: FontWeight.w600),
-          ),
-          Text(
-            'المزيد...',
-            style: Styles.style14(context)
-                .copyWith(color: Theme.of(context).colorScheme.tertiary),
-          )
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          title,
+          style: Styles.style16(context)
+              .copyWith(fontWeight: FontWeight.w600 , color: Theme.of(context).colorScheme.primary),
+        ),
+      ],
     );
   }
 }
