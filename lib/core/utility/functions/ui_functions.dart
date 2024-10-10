@@ -1,6 +1,8 @@
+import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 
 void showCustomSnackBar(BuildContext context, String message,
@@ -59,7 +61,6 @@ void showCustomDialog({
     },
   );
 }
-
 
 class _AnimatedDialog extends StatefulWidget {
   final String title;
@@ -154,3 +155,62 @@ class _AnimatedDialogState extends State<_AnimatedDialog>
   }
 }
 
+void showLogoutBottomSheet(BuildContext context ,void Function()? onConfirm , void Function()? onCancel) {
+  showModalBottomSheet(
+    context: context,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+    ),
+    builder: (BuildContext context) {
+      return Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SizedBox(
+          height: SizeConfig.screenHeight * 0.25,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min, // Minimize the height
+            children: [
+              Text(
+                'تسجيل خروج',
+                style: Styles.style18(context)
+                    .copyWith(fontFamily: GoogleFonts.changa().fontFamily),
+              ),
+              const SizedBox(height: 10),
+              Text('هل أنت متأكد من رغبتك في تسجيل الخروج؟',
+                  textAlign: TextAlign.center, style: Styles.style16(context)),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  CustomFilledButton(
+                    title: 'خروج',
+                    color: Theme.of(context).colorScheme.primary,
+                    width: SizeConfig.screenWidth * 0.35,
+                    height: 45,
+                    radius: 32,
+                    fontSize: 14,
+                    textColor: Theme.of(context).colorScheme.onPrimary,
+                    fontWeight: FontWeight.bold,
+                    onPressed: onConfirm,
+                  ),
+                  const SizedBox(width: 10,),
+                  CustomFilledButton(
+                    title: 'الغاء',
+                    color: Theme.of(context).colorScheme.surface,
+                    width: SizeConfig.screenWidth * 0.35,
+                    height: 45,
+                    radius: 32,
+                    fontSize: 14,
+                    textColor: Theme.of(context).colorScheme.onSurface,
+                    fontWeight: FontWeight.bold,
+                    onPressed: onCancel,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
+}
