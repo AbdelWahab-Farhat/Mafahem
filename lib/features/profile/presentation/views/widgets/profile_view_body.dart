@@ -20,7 +20,7 @@ class ProfileViewBody extends StatefulWidget {
 class _ProfileViewBodyState extends State<ProfileViewBody> {
   @override
   void initState() {
-    context.read<UserCubit>().getUserCourses();
+    context.read<UserCubit>().getUserItems();
     super.initState();
   }
   @override

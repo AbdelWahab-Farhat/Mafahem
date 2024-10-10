@@ -1,5 +1,7 @@
+import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
+import 'package:Basera/features/setting/presentation/views/setting_view.dart';
 import 'package:flutter/material.dart';
 
 
@@ -37,8 +39,7 @@ class ProfileAppBar extends StatelessWidget  implements PreferredSizeWidget{
                 size: 25,
               ),
               color: Theme.of(context).colorScheme.onSurface,
-              onPressed: () {
-              },
+              onPressed: ()=> push(context, const SettingView()),
             ),
           ],
         ),
