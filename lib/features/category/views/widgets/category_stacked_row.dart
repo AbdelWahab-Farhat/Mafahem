@@ -1,12 +1,14 @@
 import 'dart:ui';
 
+import 'package:Basera/core/models/category.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/features/category/views/widgets/category_content.dart';
 import 'package:flutter/material.dart';
 
 class CategoryStackedRow extends StatelessWidget {
+  final Category category;
   const CategoryStackedRow({
-    super.key,
+    super.key, required this.category,
   });
 
   @override
@@ -27,7 +29,7 @@ class CategoryStackedRow extends StatelessWidget {
                 .colorScheme
                 .onSurface
                 .withOpacity(0.29),
-            child: const CategoryContent(),
+            child:  CategoryContent(category: category,),
           ),
         ),
       ),

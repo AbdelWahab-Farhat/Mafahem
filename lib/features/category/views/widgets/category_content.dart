@@ -1,9 +1,12 @@
+import 'package:Basera/core/models/category.dart';
+import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 class CategoryContent extends StatelessWidget {
+  final Category category;
   const CategoryContent({
-    super.key,
+    super.key, required this.category,
   });
 
   @override
@@ -12,17 +15,16 @@ class CategoryContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
-          'فيزياء',
-          style: Styles.style14(context).copyWith(
-              fontWeight: FontWeight.w600,
-              color: Theme.of(context).colorScheme.surface),
+        SizedBox(
+          child: Text(
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            category.name,
+            style: Styles.style14(context).copyWith(
+                fontWeight: FontWeight.w600,
+                color: Theme.of(context).colorScheme.surface),
+          ),
         ),
-        Text(
-          '14 كورس',
-          style: Styles.style12(context).copyWith(
-              color: Theme.of(context).colorScheme.surface.withOpacity(0.8)),
-        )
       ],
     );
   }

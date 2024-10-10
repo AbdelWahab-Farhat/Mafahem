@@ -1,10 +1,13 @@
+import 'package:Basera/core/models/category.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/features/category/views/widgets/category_stacked_row.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {
+  final Category category;
   const CategoryItem({
     super.key,
+    required this.category,
   });
 
   @override
@@ -24,7 +27,7 @@ class CategoryItem extends StatelessWidget {
             width: SizeConfig.screenWidth,
             height: SizeConfig.screenHeight,
           ),
-          const CategoryStackedRow()
+           CategoryStackedRow(category: category,)
         ],
       ),
     );
