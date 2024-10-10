@@ -31,23 +31,23 @@ class NavigateCubit extends Cubit<NavigateState> {
   List<BottomBarItem> items (BuildContext context){
     return [
       BottomBarItem(
-        inActiveItem: SvgPicture.asset('lib/assets/icons/home-nav.svg',color: Theme.of(context).colorScheme.secondary,), // Inactive state
-        activeItem: SvgPicture.asset('lib/assets/icons/home-nav.svg',color: Theme.of(context).colorScheme.primary,),
+        inActiveItem: SvgPicture.asset('lib/assets/icons/home-nav.svg',color: Theme.of(context).colorScheme.onSurface,), // Inactive state
+        activeItem: SvgPicture.asset('lib/assets/icons/home-nav.svg',color: Theme.of(context).colorScheme.surface,),
         itemLabel: "Home",
       ),
       BottomBarItem(
-        inActiveItem: SvgPicture.asset('lib/assets/icons/my-courses-nav.svg',color: Theme.of(context).colorScheme.secondary,), // Inactive state
-        activeItem: SvgPicture.asset('lib/assets/icons/my-courses-nav.svg',color: Theme.of(context).colorScheme.primary,),
+        inActiveItem: SvgPicture.asset('lib/assets/icons/my-courses-nav.svg',color: Theme.of(context).colorScheme.onSurface,), // Inactive state
+        activeItem: SvgPicture.asset('lib/assets/icons/my-courses-nav.svg',color: Theme.of(context).colorScheme.surface,),
         itemLabel: "MY COURSES",
       ),
       BottomBarItem(
-        inActiveItem: SvgPicture.asset('lib/assets/icons/private-lessons-nav.svg',color: Theme.of(context).colorScheme.secondary,), // Inactive state
-        activeItem: SvgPicture.asset('lib/assets/icons/private-lessons-nav.svg',color: Theme.of(context).colorScheme.primary,),
+        inActiveItem: SvgPicture.asset('lib/assets/icons/private-lessons-nav.svg',color: Theme.of(context).colorScheme.onSurface,), // Inactive state
+        activeItem: SvgPicture.asset('lib/assets/icons/private-lessons-nav.svg',color: Theme.of(context).colorScheme.surface,),
         itemLabel: "PRIVATE LESSONS",
       ),
       BottomBarItem(
-        inActiveItem: SvgPicture.asset('lib/assets/icons/category-nav.svg',color: Theme.of(context).colorScheme.secondary,), // Inactive state
-        activeItem: SvgPicture.asset('lib/assets/icons/category-nav.svg',color: Theme.of(context).colorScheme.primary,),
+        inActiveItem: SvgPicture.asset('lib/assets/icons/category-nav.svg',color: Theme.of(context).colorScheme.onSurface,), // Inactive state
+        activeItem: SvgPicture.asset('lib/assets/icons/category-nav.svg',color: Theme.of(context).colorScheme.surface,),
         itemLabel: "CATEGORIES",
       ),
     ];

@@ -14,6 +14,7 @@ class RootViewBody extends StatelessWidget {
         return Scaffold(
           body: navigateCubit.views[navigateCubit.currentIndex],
           bottomNavigationBar: AnimatedNotchBottomBar(
+            color: Theme.of(context).colorScheme.onPrimary,
             showLabel: false,
             notchBottomBarController: navigateCubit.notchBottomBarController,
             bottomBarItems: navigateCubit.items(context),
