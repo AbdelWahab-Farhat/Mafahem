@@ -3,7 +3,7 @@ import 'package:Basera/core/utility/functions/ui_functions.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
 import 'package:Basera/features/setting/data/log_out_service.dart';
 import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/setting_view_body.dart';
+import 'package:Basera/features/setting/presentation/views/widgets/setting_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -19,6 +19,7 @@ class EditAccountSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SettingListTile(
           title: 'تعديل الحساب',
