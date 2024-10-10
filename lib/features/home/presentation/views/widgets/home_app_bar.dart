@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
@@ -5,6 +7,7 @@ import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart
 import 'package:Basera/features/cart/presentation/views/cart_view.dart';
 import 'package:Basera/features/notification/presentation/views/notification_view.dart';
 import 'package:Basera/features/profile/presentation/views/profile_view.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,13 +27,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: GestureDetector(
         onTap: () => push(context, const ProfileView()),
         child: Container(
-          margin: const EdgeInsets.only(right: 15),
-          width: 40,
-          height: 40,
-          child: Image.asset(
-            'lib/assets/images/Avatar.png',
-          ),
-        ),
+            margin: const EdgeInsets.only(right: 15),
+            width: 40,
+            height: 40,
+            child: CachedNetworkImage(
+                imageUrl: tokenCubit.user!.data.profilePhotoUrl,
+              placeholder: (context, url) => Image.asset('lib/assets/images/Avatar.png'),
+              errorWidget: (context, url, error) => Image.asset('lib/assets/images/Avatar.png'),
+            )),
       ),
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
