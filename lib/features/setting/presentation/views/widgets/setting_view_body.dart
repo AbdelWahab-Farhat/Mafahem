@@ -2,9 +2,9 @@ import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/widgets/custom_app_bar.dart';
 import 'package:Basera/core/widgets/custom_divider.dart';
 import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Basera/features/home/presentation/views/widgets/section_title.dart';
 import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/setting_view_body.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:Basera/features/setting/presentation/views/widgets/setting_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Basera/features/setting/presentation/views/widgets/edit_account_section.dart';
@@ -34,7 +34,7 @@ class SettingViewBody extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    HeaderOfSetting(cubit: cubit),
+                    SettingHeader(cubit: cubit),
                     const SizedBox(
                       height: 16,
                     ),
@@ -67,9 +67,9 @@ class SettingViewBody extends StatelessWidget {
         color: Theme.of(context).colorScheme.surface,
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).colorScheme.shadow,
-            blurRadius: 2,
-            offset: const Offset(0, 2),
+            color: Theme.of(context).colorScheme.secondary.withOpacity(0.8),
+            blurRadius: 1,
+            offset: const Offset(0, 0),
           )
         ]);
   }
