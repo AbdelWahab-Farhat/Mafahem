@@ -17,14 +17,13 @@ class LoginService {
         Routes.LOGIN_URL,
         data: {"email": email, "password": password},
       );
-      log(res.statusCode.toString());
-      log(res.data.toString());
       if (res.statusCode == HttpStatus.ok) {
         User user = User.fromJson(res.data);
-        if (user.data?.emailVerifiedAt == null) {
-          return left(ServerFailure(message: 'Please Verify Your Email First'));
-        }
+        // if (user.data?.emailVerifiedAt == null) {
+        //   return left(ServerFailure(message: 'Please Verify Your Email First'));
+        // }
         await TokenService().saveToken(user.token!);
+
         return right(user);
       } else {
         return left(ServerFailure(message: res.data['message'] ?? 'Unknown error'));
