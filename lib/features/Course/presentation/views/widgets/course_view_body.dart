@@ -13,7 +13,7 @@ class CourseViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3, // Number of tabs
+      length: 3,
       child: Scaffold(
         bottomNavigationBar: const AddToCartNavBottom(),
         body: Column(
