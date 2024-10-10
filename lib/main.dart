@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:Basera/core/apis/fire_base_api.dart';
 import 'package:Basera/core/dependency_injection.dart';
 import 'package:Basera/core/utility/theme.dart';
@@ -19,29 +18,32 @@ void main() async {
   setup();
   await Firebase.initializeApp();
 
-  await   FireBaseApi().initNotifications();
+  await FireBaseApi().initNotifications();
 
   var sp = await SharedPreferences.getInstance();
   log(sp.getString('token') ?? 'no token');
+  var isDark = sp.getBool('isDark') ?? false;
+  log(isDark.toString());
   bool isFirstTime = !sp.containsKey('isFirstTime');
   if (isFirstTime) {
     await sp.setBool('isFirstTime', false);
   }
   runApp(BlocProvider(
     create: (context) => ThemeCubit(),
-    child: MyApp(isFirstTime: isFirstTime),
+    child: MyApp(isFirstTime: isFirstTime, isDark: isDark,),
   ));
 }
 
 class MyApp extends StatelessWidget {
   final bool isFirstTime;
+  final bool isDark;
 
-  const MyApp({super.key, required this.isFirstTime});
+  const MyApp({super.key, required this.isFirstTime, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
     var themeCubit = context.read<ThemeCubit>();
-
+    themeCubit.isDark = isDark;
     MaterialTheme theme = const MaterialTheme();
     return BlocProvider(
       create: (context) => GetIt.instance.get<TokenCubit>(),
