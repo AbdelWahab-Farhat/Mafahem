@@ -1,6 +1,7 @@
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
+import 'package:Basera/features/subscription/presentation/views/widgets/subPriceCard.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -10,7 +11,7 @@ void showCustomSnackBar(BuildContext context, String message,
   // Create an overlay entry
   OverlayEntry overlayEntry = OverlayEntry(
     builder: (context) => Positioned(
-      top: 50, // Adjust the top position
+      top: 70, // Adjust the top position
       left: 20,
       right: 20,
       child: Material(
