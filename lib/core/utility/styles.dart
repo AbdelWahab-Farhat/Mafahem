@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 abstract class Styles {
   static InputBorder setOutlinedBorder(BuildContext context,
           {double radius = 8, bool isErrorBorder = false, double width = 1}) =>
@@ -12,6 +11,14 @@ abstract class Styles {
                   ? Theme.of(context).colorScheme.error
                   : Theme.of(context).colorScheme.onSurface,
               width: width));
+
+  static Gradient customLinerGradient(BuildContext context,
+      {begin = Alignment.topLeft, end = Alignment.bottomRight}) {
+    return LinearGradient(colors: [
+      Theme.of(context).colorScheme.primary,
+      Theme.of(context).colorScheme.onPrimaryContainer.withAlpha(-33),
+    ], begin: begin, end: end);
+  }
 
   static TextStyle style32(BuildContext context) {
     return TextStyle(
@@ -36,6 +43,7 @@ abstract class Styles {
         color: Theme.of(context).colorScheme.onPrimary,
         fontWeight: FontWeight.bold);
   }
+
   static TextStyle style18(BuildContext context) {
     return TextStyle(
         fontFamily: GoogleFonts.changa().fontFamily,
