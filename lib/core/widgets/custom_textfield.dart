@@ -5,12 +5,14 @@ import '../utility/styles.dart';
 class CustomTextField extends StatelessWidget {
   final String? label;
   final Widget? icon;
+  final TextEditingController? controller;
   final String? Function(String?)? validator;
   final String? Function(String?)? onSaved;
   const CustomTextField({
     super.key,
     this.label,
     this.icon, this.validator, this.onSaved,
+    this.controller,
   });
 
   @override
@@ -27,9 +29,11 @@ class CustomTextField extends StatelessWidget {
           height: 10,
         ),
         TextFormField(
+          controller: controller,
           validator: validator,
           onSaved: onSaved,
           style: Styles.style14(context),
+          onTapOutside: (event) => FocusManager.instance.primaryFocus?.unfocus(),
           keyboardType:
           icon == null ? TextInputType.text : TextInputType.number,
           obscureText: icon == null ? false : true,
