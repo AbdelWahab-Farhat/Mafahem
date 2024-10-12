@@ -12,6 +12,7 @@ class CustomFilledButton extends StatelessWidget {
   final Color? textColor;
   final double fontSize;
   final FontWeight fontWeight;
+
   const CustomFilledButton({
     super.key,
     required this.title,
@@ -19,10 +20,10 @@ class CustomFilledButton extends StatelessWidget {
     this.width = 330,
     this.height = 50,
     this.radius = 8,
-    this.color = Colors.blue,
     this.textColor,
     this.fontSize = 20,
-    this.fontWeight = FontWeight.bold
+    this.fontWeight = FontWeight.bold,
+    this.color = Colors.blue,
   });
 
   @override
@@ -30,23 +31,32 @@ class CustomFilledButton extends StatelessWidget {
     return SizedBox(
       width: width,
       height: height,
-      child: ElevatedButton(
-          style: ButtonStyle(
-            backgroundColor: WidgetStateProperty.all<Color>(color),
-            shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(radius),
-              ),
+      child: Ink(
+        decoration: BoxDecoration(
+          gradient: Styles.customLinerGradient(context),
+          borderRadius: BorderRadius.circular(radius),
+        ),
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            shadowColor: Colors.transparent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(radius),
             ),
           ),
           onPressed: onPressed,
           child: Center(
             child: Text(
-              textAlign: TextAlign.center,
               title,
-              style: Styles.style20(context).copyWith(color:textColor ?? Theme.of(context).colorScheme.onSurface,fontSize: fontSize,fontWeight: fontWeight),
+              style: Styles.style20(context).copyWith(
+                color: textColor ?? Theme.of(context).colorScheme.onSurface,
+                fontSize: fontSize,
+                fontWeight: fontWeight,
+              ),
             ),
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
