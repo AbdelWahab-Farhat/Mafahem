@@ -68,7 +68,7 @@ class SubscriptionCubit extends Cubit<SubscriptionState> {
                               isSelected: yearlyPlan,
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           GestureDetector(
