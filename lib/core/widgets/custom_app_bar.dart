@@ -22,13 +22,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           const SizedBox(width: 5,),
           IconButton(
-            highlightColor: Theme.of(context).colorScheme.surface.withOpacity(0.1),
-            splashColor: Theme.of(context).colorScheme.surface.withOpacity(0.1),
-            style: ButtonStyle(
-              backgroundColor:WidgetStateProperty.all(Theme.of(context).colorScheme.onSurface),
-            ),
+            highlightColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+            splashColor: Theme.of(context).colorScheme.onSurface.withOpacity(0.1),
+            style: const ButtonStyle(),
             iconSize: 25,
-            icon: Icon(Icons.arrow_back_ios_new, color: Theme.of(context).colorScheme.surface,),
+            icon: Icon(Icons.arrow_back_ios_new, color: Theme.of(context).colorScheme.secondary,),
             onPressed: () {
               Navigator.of(context).pop();
             },
