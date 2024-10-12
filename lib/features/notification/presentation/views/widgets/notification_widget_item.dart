@@ -17,7 +17,7 @@ class NotificationWidgetItem extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          margin: EdgeInsets.only(bottom: 24),
+          margin: const EdgeInsets.only(bottom: 24),
           padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16),
           width: SizeConfig.screenWidth,
           decoration: BoxDecoration(
@@ -25,10 +25,10 @@ class NotificationWidgetItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
             boxShadow: [
               BoxShadow(
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),
+                color: Theme.of(context).colorScheme.secondary.withOpacity(0.1),
                 spreadRadius: 0,
-                blurRadius: 0.2,
-                offset: const Offset(0, 2), // changes position of shadow
+                blurRadius: 0.3,
+                offset: const Offset(2, 2), // changes position of shadow
               ),
             ],
           ),
