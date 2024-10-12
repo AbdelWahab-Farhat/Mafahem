@@ -1,8 +1,5 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
 import 'package:Basera/features/on_boarding/presentation/manager/onboarding_cubit.dart';
-import 'package:Basera/features/on_boarding/presentation/views/widgets/custom_page_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -48,6 +45,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             builder: (context, state) {
               return CustomFilledButton(
                 color: Theme.of(context).colorScheme.primary,
+                textColor: Theme.of(context).colorScheme.onPrimary,
                 title: onBoardingCubit.buttonTitle,
                 onPressed: () {
                   onBoardingCubit.navigateTo(context);
