@@ -1,5 +1,6 @@
 import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class LogoTitle extends StatelessWidget {
@@ -12,8 +13,8 @@ class LogoTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.asset(
-          'lib/assets/images/logo-test.png',
+        SvgPicture.asset(
+          'lib/assets/icons/logo.svg',
           width: 94.95,
           height: 59.92,
         ),
