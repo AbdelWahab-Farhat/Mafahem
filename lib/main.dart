@@ -1,5 +1,4 @@
 import 'dart:developer';
-import 'package:Basera/core/apis/fire_base_api.dart';
 import 'package:Basera/core/dependency_injection.dart';
 import 'package:Basera/core/utility/theme.dart';
 import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
@@ -17,9 +16,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   setup();
   await Firebase.initializeApp();
-
-  await FireBaseApi().initNotifications();
-
   var sp = await SharedPreferences.getInstance();
   log(sp.getString('token') ?? 'no token');
   var isDark = sp.getBool('isDark') ?? false;
@@ -39,7 +35,6 @@ class MyApp extends StatelessWidget {
   final bool isDark;
 
   const MyApp({super.key, required this.isFirstTime, required this.isDark});
-
   @override
   Widget build(BuildContext context) {
     var themeCubit = context.read<ThemeCubit>();
