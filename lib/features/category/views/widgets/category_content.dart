@@ -16,6 +16,7 @@ class CategoryContent extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SizedBox(
+          width: SizeConfig.screenWidth *  0.364,
           child: Text(
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
