@@ -1,6 +1,7 @@
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/utility/functions/ui_functions.dart';
 import 'package:Basera/features/Auth/presentation/views/login_view.dart';
+import 'package:Basera/features/profile_edit/presentation/views/edit_profile_view.dart';
 import 'package:Basera/features/setting/data/log_out_service.dart';
 import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
 import 'package:Basera/features/setting/presentation/views/widgets/setting_list_tile.dart';
@@ -22,6 +23,7 @@ class EditAccountSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SettingListTile(
+          onTap: () => push(context, const EditProfileView()),
           title: 'تعديل الحساب',
           trailing: Icon(
             Icons.arrow_forward_ios,
