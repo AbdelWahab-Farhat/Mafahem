@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:Basera/core/apis/fire_base_api.dart';
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_search_field.dart';
 import 'package:Basera/features/home/presentation/views/widgets/categories_section.dart';
@@ -10,9 +11,19 @@ import 'package:Basera/features/home/presentation/views/widgets/work_shop_sectio
 import 'package:Basera/features/search/views/search_view.dart';
 import 'package:flutter/material.dart';
 
-class HomeViewBody extends StatelessWidget {
+class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
 
+  @override
+  State<HomeViewBody> createState() => _HomeViewBodyState();
+}
+
+class _HomeViewBodyState extends State<HomeViewBody> {
+  @override
+  void initState() {
+     FireBaseApi().initNotifications();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
