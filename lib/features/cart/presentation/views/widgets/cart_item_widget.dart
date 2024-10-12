@@ -1,3 +1,4 @@
+import 'package:Basera/core/widgets/custom_divider.dart';
 import 'package:Basera/features/cart/presentation/views/widgets/cart_item_widget_content.dart';
 import 'package:Basera/features/cart/presentation/views/widgets/cart_item_widget_price_with_remove.dart';
 import 'package:flutter/material.dart';
@@ -10,10 +11,14 @@ class CartItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20,top: 8),
           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const CartItemWidgetContent(),
               const Spacer(),
@@ -31,7 +36,7 @@ class CartItemWidget extends StatelessWidget {
                     BoxShadow(
                       color: Colors.black.withOpacity(0.25),
                       offset: const Offset(0, 3),
-                      blurRadius: 4, // ضبابية الظل (Blur = 4)
+                      blurRadius: 4,
                       spreadRadius: 0,
                     ),
                   ],
@@ -51,7 +56,8 @@ class CartItemWidget extends StatelessWidget {
           height: 8,
         ),
         const CartItemWidgetPriceWithRemove(),
-        Divider(color: Theme.of(context).colorScheme.onSurface.withOpacity(0.2),),
+        const SizedBox(height: 8),
+        CustomDivider(),
       ],
     );
   }

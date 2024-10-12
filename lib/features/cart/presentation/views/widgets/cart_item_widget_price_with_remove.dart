@@ -14,20 +14,22 @@ class CartItemWidgetPriceWithRemove extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20, right: 20),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomFilledButton(
             title: 'ازالة',
             fontSize: 16,
-            height: 34,
+            height: 40,
             width: 100,
-            color: Theme.of(context).colorScheme.onSurface,
+            color: Theme.of(context).colorScheme.primary,
             textColor: Theme.of(context).colorScheme.onPrimary,
+            fontWeight: FontWeight.bold,
             radius: 42,
           ),
           const Spacer(),
           Text(
             "90.40د.ل",
-            style: Styles.style20(context).copyWith(
+            style: Styles.style18(context).copyWith(
                 color: Theme.of(context).colorScheme.onSurface),
           ),
         ],
