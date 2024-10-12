@@ -1,7 +1,7 @@
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/subscription/presentation/views/widgets/subPriceCard.dart';
+import 'package:Basera/core/widgets/custom_outline_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -195,11 +195,12 @@ void showLogoutBottomSheet(BuildContext context ,void Function()? onConfirm , vo
                     onPressed: onConfirm,
                   ),
                   const SizedBox(width: 10,),
-                  CustomFilledButton(
+                    CustomOutlinedButton(
                     title: 'الغاء',
-                    color: Theme.of(context).colorScheme.surface,
                     width: SizeConfig.screenWidth * 0.35,
                     height: 45,
+                    borderColor: Theme.of(context).colorScheme.primary,
+                    borderWidth: 3,
                     radius: 32,
                     fontSize: 14,
                     textColor: Theme.of(context).colorScheme.onSurface,
