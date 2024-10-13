@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:Basera/features/setting/presentation/views/widgets/edit_account_section.dart';
 import 'package:Basera/features/setting/presentation/views/widgets/more_section.dart';
-
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SettingViewBody extends StatelessWidget {
   const SettingViewBody({super.key});
@@ -18,42 +18,45 @@ class SettingViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var cubit = context.read<TokenCubit>();
     var themeCubit = context.read<ThemeCubit>();
+
     return Scaffold(
       appBar: const CustomAppBar(title: 'الأعدادات'),
-      body: Align(
-        alignment: Alignment.bottomCenter,
-        child: Container(
-          width: SizeConfig.screenWidth,
-          height: SizeConfig.screenHeight * 0.75,
-          decoration: containerStyle(context),
-          child: Stack(
-            children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SettingHeader(cubit: cubit),
-                    const SizedBox(
-                      height: 16,
+      body: SingleChildScrollView(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: SizeConfig.screenHeight - (SizeConfig.screenHeight * 0.1),
+          ),
+          child: IntrinsicHeight(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: SizeConfig.screenHeight * 0.02),
+                SvgPicture.asset('lib/assets/icons/logo.svg', height: 80),
+                const Spacer(), // Properly uses available space
+                Container(
+                  width: SizeConfig.screenWidth,
+                  decoration: containerStyle(context),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 24),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        SettingHeader(cubit: cubit),
+                        const SizedBox(height: 16),
+                        const CustomDivider(),
+                        const SizedBox(height: 14),
+                        const SectionTitle(title: 'اعدادات الحساب'),
+                        EditAccountSection(themeCubit: themeCubit),
+                        const CustomDivider(),
+                        const SizedBox(height: 16),
+                        const SectionTitle(title: 'المزيد'),
+                        const MoreSection(),
+                      ],
                     ),
-                    const CustomDivider(),
-                    const SizedBox(
-                      height: 14,
-                    ),
-                    const SectionTitle(
-                      title: 'اعدادات الحساب',
-                    ),
-                    EditAccountSection(themeCubit: themeCubit),
-                    const CustomDivider(),
-                    const SizedBox(height: 16,),
-                    const SectionTitle(title: 'المزيد'),
-                    const MoreSection(),
-                  ],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
@@ -62,20 +65,18 @@ class SettingViewBody extends StatelessWidget {
 
   BoxDecoration containerStyle(BuildContext context) {
     return BoxDecoration(
-        borderRadius: const BorderRadius.only(
-            topRight: Radius.circular(32), topLeft: Radius.circular(32)),
-        color: Theme.of(context).colorScheme.surface,
-        boxShadow: [
-          BoxShadow(
-            color: Theme.of(context).colorScheme.secondary.withOpacity(0.8),
-            blurRadius: 1,
-            offset: const Offset(0, 0),
-          )
-        ]);
+      borderRadius: const BorderRadius.only(
+        topRight: Radius.circular(32),
+        topLeft: Radius.circular(32),
+      ),
+      color: Theme.of(context).colorScheme.surface,
+      boxShadow: [
+        BoxShadow(
+          color: Theme.of(context).colorScheme.secondary.withOpacity(0.8),
+          blurRadius: 1,
+          offset: const Offset(0, 0),
+        ),
+      ],
+    );
   }
 }
-
-
-
-
-
