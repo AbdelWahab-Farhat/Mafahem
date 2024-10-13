@@ -11,3 +11,7 @@ class ServerFailure extends Failure{
 class RestPasswordFailure extends Failure{
   RestPasswordFailure({required super.message});
 }
+
+class CancelledFailure extends Failure{
+  CancelledFailure({required super.message});
+}
