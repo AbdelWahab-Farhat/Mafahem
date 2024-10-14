@@ -2,6 +2,7 @@ import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/features/setting/presentation/views/terms_and_conditions_view.dart';
 import 'package:Basera/features/setting/presentation/views/widgets/setting_list_tile.dart';
 import 'package:Basera/features/subscription/presentation/views/subscription_view.dart';
+import 'package:Basera/features/teacher_join/presentation/views/teacher_join_view.dart';
 import 'package:flutter/material.dart';
 
 class MoreSection extends StatelessWidget {
@@ -34,6 +35,7 @@ class MoreSection extends StatelessWidget {
         ),
         SettingListTile(
           title: 'كن من طاقمنا التعليمي',
+          onTap: () => push(context, const TeacherJoinView()),
           trailing: Icon(
             Icons.arrow_forward_ios,
             color: Theme.of(context).colorScheme.onSurface,
