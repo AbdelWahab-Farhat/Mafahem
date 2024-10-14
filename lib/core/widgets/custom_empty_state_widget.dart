@@ -23,7 +23,7 @@ class CustomEmptyStateWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           image,
-          const SizedBox(height: 32,),
+          const SizedBox(height: 20,),
           Text(
             title,
             style: Styles.style20(context).copyWith(
