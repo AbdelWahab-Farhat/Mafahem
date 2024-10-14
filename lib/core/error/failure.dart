@@ -15,3 +15,6 @@ class RestPasswordFailure extends Failure{
 class CancelledFailure extends Failure{
   CancelledFailure({required super.message});
 }
+class FirebaseFailure extends Failure{
+  FirebaseFailure({required super.message});
+}
