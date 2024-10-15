@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -22,11 +25,13 @@ class AboutCourseTextIcon extends StatelessWidget {
         const SizedBox(
           width: 16,
         ),
-        Text(
-          title,
-          style:
-          Styles.style16(context).copyWith(fontWeight: FontWeight.normal),
-          maxLines: 1,
+        SizedBox(
+          width: SizeConfig.screenWidth  * 0.78,
+          child: Text(
+            title,
+            style:
+            Styles.style16(context).copyWith(fontWeight: FontWeight.normal),
+          ),
         ),
       ],
     );
