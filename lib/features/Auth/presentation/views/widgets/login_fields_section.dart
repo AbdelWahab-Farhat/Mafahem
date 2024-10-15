@@ -3,7 +3,7 @@ import 'package:Basera/core/widgets/custom_textfield.dart';
 import 'package:Basera/features/Auth/presentation/manager/login_cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginFieldsSection extends StatelessWidget {
   const LoginFieldsSection({
@@ -27,9 +27,13 @@ class LoginFieldsSection extends StatelessWidget {
           ),
           CustomTextField(
             validator: validatePassword,
+            isObscureText: true,
             onSaved: (value) => loginCubit.password = value,
             label: 'كلمة المرور',
-            icon: SvgPicture.asset('lib/assets/icons/eye-off.svg'),
+            icon: const Icon(
+              FontAwesomeIcons.eyeSlash,
+              size: 15,
+            ),
           ),
         ],
       ),
