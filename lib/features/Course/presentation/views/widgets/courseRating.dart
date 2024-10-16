@@ -9,15 +9,15 @@ class CourseRatings extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        RatingBar(starCount: 5, percentage: percentageByStar[0],),
+        RatingBarWidget(starCount: 5, percentage: percentageByStar[0],),
         const SizedBox(height: 8),
-        RatingBar(starCount: 4, percentage: percentageByStar[1],),
+        RatingBarWidget(starCount: 4, percentage: percentageByStar[1],),
         const SizedBox(height: 8),
-        RatingBar(starCount: 3, percentage: percentageByStar[2],),
+        RatingBarWidget(starCount: 3, percentage: percentageByStar[2],),
         const SizedBox(height: 8),
-        RatingBar(starCount: 2, percentage: percentageByStar[3]),
+        RatingBarWidget(starCount: 2, percentage: percentageByStar[3]),
         const SizedBox(height: 8),
-        RatingBar(starCount: 1, percentage: percentageByStar[4],),
+        RatingBarWidget(starCount: 1, percentage: percentageByStar[4],),
       ],
     );
   }

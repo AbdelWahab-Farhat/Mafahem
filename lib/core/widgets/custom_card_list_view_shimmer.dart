@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
 
-class ProfileShimmer extends StatelessWidget {
-  const ProfileShimmer({
+class CustomCardListViewShimmer extends StatelessWidget {
+  const CustomCardListViewShimmer({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 5, // Placeholder count
+      shrinkWrap: true,
+      itemCount: 3, // Placeholder count
       physics: const ClampingScrollPhysics(),
       padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
       itemBuilder: (BuildContext context, int index) {

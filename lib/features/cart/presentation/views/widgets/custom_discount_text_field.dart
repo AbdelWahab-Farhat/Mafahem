@@ -1,5 +1,7 @@
 import 'package:Basera/core/utility/styles.dart';
+import 'package:Basera/features/cart/presentation/manager/coupon_cubit/coupon_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomDiscountTextField extends StatelessWidget {
   final String hintText;
@@ -37,7 +39,7 @@ class CustomDiscountTextField extends StatelessWidget {
               color: Theme.of(context).colorScheme.secondary.withOpacity(0.5)),
           prefixIcon: Icon(icon),
           suffixIcon: TextButton(
-              onPressed: () {},
+              onPressed: () => context.read<CouponCubit>().applyCoupon(),
               child: Text(
                 'اضافة',
                 style: Styles.style14(context)

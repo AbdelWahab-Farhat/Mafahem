@@ -30,6 +30,7 @@ class CustomEmptyStateWidget extends StatelessWidget {
               color: Theme.of(context).colorScheme.onSurface,
               fontFamily: GoogleFonts.changa().fontFamily,
             ),
+            textAlign: TextAlign.center,
           ),
           const SizedBox(height: 4,),
           Text(
@@ -37,6 +38,8 @@ class CustomEmptyStateWidget extends StatelessWidget {
             style: Styles.style16(context).copyWith(fontFamily: GoogleFonts.changa().fontFamily,
               color: Theme.of(context).colorScheme.secondary,
             ),
+            textAlign: TextAlign.center,
+
           ),
           const SizedBox(height: 8,),
           button ?? const SizedBox()
