@@ -1,11 +1,15 @@
+import 'package:Basera/core/models/course.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/custom_filled_button.dart';
+import 'package:Basera/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 
 class CartItemWidgetPriceWithRemove extends StatelessWidget {
+  final Course course;
   const CartItemWidgetPriceWithRemove({
-    super.key,
+    super.key, required this.course,
   });
 
   @override
@@ -25,10 +29,11 @@ class CartItemWidgetPriceWithRemove extends StatelessWidget {
             textColor: Theme.of(context).colorScheme.onPrimary,
             fontWeight: FontWeight.bold,
             radius: 42,
+            onPressed: () => context.read<CartCubit>().removeFromCart(course.id.toString()),
           ),
           const Spacer(),
           Text(
-            "90.40د.ل",
+            "${course.price}د.ل",
             style: Styles.style18(context).copyWith(
                 color: Theme.of(context).colorScheme.onSurface),
           ),

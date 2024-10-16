@@ -3,8 +3,10 @@ import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 class CartItemWidgetContent extends StatelessWidget {
+  final String title;
+  final String instructionName;
   const CartItemWidgetContent({
-    super.key,
+    super.key, required this.title, required this.instructionName,
   });
 
   @override
@@ -15,7 +17,7 @@ class CartItemWidgetContent extends StatelessWidget {
         SizedBox(
           width: SizeConfig.screenWidth * 0.5,
           child: Text(
-              "الكيمياء حيوية",
+            title,
               style: Styles.style16(context)
                   .copyWith(fontWeight: FontWeight.w600),
             ),
@@ -26,7 +28,7 @@ class CartItemWidgetContent extends StatelessWidget {
         SizedBox(
           width: SizeConfig.screenWidth * 0.5,
           child: Text(
-            'المحاضر:عزيز احمد',
+            'المدرب:${instructionName}',
             style: Styles.style14(context).copyWith(
                 color: Theme.of(context).colorScheme.secondary),
           ),

@@ -1,11 +1,16 @@
+import 'package:Basera/core/models/course.dart';
 import 'package:Basera/core/widgets/custom_divider.dart';
 import 'package:Basera/features/cart/presentation/views/widgets/cart_item_widget_content.dart';
 import 'package:Basera/features/cart/presentation/views/widgets/cart_item_widget_price_with_remove.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class CartItemWidget extends StatelessWidget {
+  final Course course;
   const CartItemWidget({
     super.key,
+    required this.course,
   });
 
   @override
@@ -15,12 +20,15 @@ class CartItemWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20,top: 8),
+          padding: const EdgeInsets.only(left: 20, right: 20, top: 8),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const CartItemWidgetContent(),
+              CartItemWidgetContent(
+                instructionName: course.instructorName,
+                title: course.title,
+              ),
               const Spacer(),
               Container(
                 width: 147,
@@ -43,9 +51,14 @@ class CartItemWidget extends StatelessWidget {
                 ),
                 child: AspectRatio(
                   aspectRatio: 2 / 3,
-                  child: Image.asset(
-                    'lib/assets/images/Roadmap-to-Learn-JavaScript-For-Beginners 1.png',
-                    fit: BoxFit.cover,
+                  child: CachedNetworkImage(
+                    imageUrl: course.image,
+                    placeholder: (context, url) => Shimmer.fromColors(
+                        baseColor: Theme.of(context).colorScheme.secondary,
+                        highlightColor: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
+                        child: Container()),
+                    // TODO LATER ADD ERROR IMAGE (SAYING NO IMAGE)
+                    errorWidget: (context, url, error) => Container(),
                   ),
                 ),
               ),
@@ -55,9 +68,9 @@ class CartItemWidget extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-        const CartItemWidgetPriceWithRemove(),
+         CartItemWidgetPriceWithRemove(course: course,),
         const SizedBox(height: 8),
-        CustomDivider(),
+        const CustomDivider(),
       ],
     );
   }
