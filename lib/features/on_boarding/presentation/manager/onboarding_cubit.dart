@@ -15,19 +15,19 @@ class OnboardingCubit extends Cubit<OnboardingState> {
 
   List<CustomPageItem> items = [
     const CustomPageItem(
-        title: 'معا للعطاء',
+        title: 'جميع المراحل التعليمية',
         content:
-        'تسهيل العطاء والخير عبر التكنولوجيا، حيث يجمع بين الأفراد الذين يرغبون في تقديم الدعم والمساعدات مع المحتاجين.',
+            ' تشمل كافة المراحل من الروضة الى حين التخرج ، مما يوفر محتوى تعليميًا مناسبًا لكل فئة عمرية. نسعى لتقديم مواد تعليمية متنوعة ومبسطة تساهم في تحسين فهم الطلاب وتعزيز تحصيلهم الأكاديمي.',
         imageUrl: 'lib/assets/images/on-borading1.png'),
     const CustomPageItem(
-        title: 'أكفال للمساكين',
+        title: 'خبراء في جميع المجالات',
         content:
-        'هنا لنساعدك في تقديم الدعم والمساعدة لمن هم في حاجة في “عطاء” , نسعى لتوفير موارد وخدمات تساعد المساكين في تحسين حياتهم.',
+            'يتميزون بمهاراتهم وخبراتهم الواسعة، جاهزون لتقديم المعرفة والدعم في كل التخصصات. نسعى لتوفير تعليم عالي الجودة بإشراف نخبة من المحترفين لضمان تحقيق أفضل النتائج الأكاديمية والعملية.',
         imageUrl: 'lib/assets/images/on-borading-2.png'),
     const CustomPageItem(
-        title: 'أكفال للمساكين',
+        title: 'شهادات موثوقة ومعتمدة',
         content:
-        'هنا لنساعدك في تقديم الدعم والمساعدة لمن هم في حاجة في “عطاء” , نسعى لتوفير موارد وخدمات تساعد المساكين في تحسين حياتهم.',
+            'تمنحك ميزة تنافسية وتؤكد على كفاءتك ومعرفتك المعترف بها دوليًا ومحليًا، مما يفتح أمامك فرصًا أوسع في سوق العمل والتطوير المهني.',
         imageUrl: 'lib/assets/images/on-borading-3.png'),
   ];
 
@@ -35,11 +35,11 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     controller.addListener(() {
       int currentPage = controller.page?.round() ?? 0;
       if (currentPage == count - 1) {
-          buttonTitle = 'أبدا';
-          emit(OnboardingInitial());
+        buttonTitle = 'أبدا';
+        emit(OnboardingInitial());
       } else {
-          buttonTitle = 'التالي';
-          emit(OnboardingInitial());
+        buttonTitle = 'التالي';
+        emit(OnboardingInitial());
       }
     });
   }
@@ -49,8 +49,7 @@ class OnboardingCubit extends Cubit<OnboardingState> {
       pushAndRemoveUntil(context, const LoginView());
     } else {
       controller.nextPage(
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.easeInOut);
+          duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
     }
   }
 }

@@ -1,11 +1,13 @@
+import 'package:Basera/core/models/course.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/rate_widget.dart';
 import 'package:flutter/material.dart';
 
 
 class RateWithStudentNumber extends StatelessWidget {
+  final Course course;
   const RateWithStudentNumber({
-    super.key,
+    super.key, required this.course,
   });
 
   @override
@@ -13,8 +15,9 @@ class RateWithStudentNumber extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text("10000 طالب",style: Styles.style16(context),),
-        RateWidget(),
+        //TODO: ADD STUDENT NUMBER
+        Text("${course.enrollmentCount} طالب",style: Styles.style16(context),),
+         RateWidget(rate: course.averageRating ?? 0,),
       ],
     );
   }

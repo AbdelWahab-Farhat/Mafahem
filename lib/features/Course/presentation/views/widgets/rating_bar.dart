@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class RatingBar extends StatelessWidget {
+class RatingBarWidget extends StatelessWidget {
   final int starCount;
   final double percentage;
 
-  const RatingBar({
+  const RatingBarWidget({
     super.key,
     required this.starCount,
     required this.percentage,

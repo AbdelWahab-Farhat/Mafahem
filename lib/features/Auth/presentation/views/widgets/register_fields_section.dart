@@ -4,6 +4,7 @@ import 'package:Basera/features/Auth/presentation/manager/register_cubit/registe
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class RegisterFieldsSection extends StatelessWidget {
@@ -38,7 +39,11 @@ class RegisterFieldsSection extends StatelessWidget {
             validator: validatePassword,
             onSaved:  (value) => registerCubit.password = value,
             label: 'كلمة المرور',
-            icon: SvgPicture.asset('lib/assets/icons/eye-off.svg'),
+            isObscureText: true,
+            icon: const Icon(
+              FontAwesomeIcons.eyeSlash,
+              size: 15,
+            ),
           ),
           const SizedBox(
             height: 24,
@@ -47,7 +52,11 @@ class RegisterFieldsSection extends StatelessWidget {
             validator: validatePassword,
             onSaved:  (value) => registerCubit.confirmPassword = value,
             label: 'تأكيد كلمة المرور',
-            icon: SvgPicture.asset('lib/assets/icons/eye-off.svg'),
+            isObscureText: true,
+            icon: const Icon(
+              FontAwesomeIcons.eyeSlash,
+              size: 15,
+            ),
           ),
         ],
       ),

@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:Basera/core/apis/fire_base_api.dart';
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/widgets/custom_search_field.dart';
+import 'package:Basera/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
 import 'package:Basera/features/home/presentation/views/widgets/categories_section.dart';
 import 'package:Basera/features/home/presentation/views/widgets/custom_carouse_slider.dart';
 import 'package:Basera/features/home/presentation/views/widgets/home_app_bar.dart';
@@ -10,6 +11,7 @@ import 'package:Basera/features/home/presentation/views/widgets/section_title.da
 import 'package:Basera/features/home/presentation/views/widgets/work_shop_section.dart';
 import 'package:Basera/features/search/views/search_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HomeViewBody extends StatefulWidget {
   const HomeViewBody({super.key});
@@ -22,6 +24,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   @override
   void initState() {
      FireBaseApi().initNotifications();
+     context.read<PromoCoursesCubit>().getPromoCourses();
     super.initState();
   }
   @override

@@ -6,7 +6,6 @@ import 'package:Basera/core/widgets/custom_error_widget.dart';
 import 'package:Basera/core/widgets/custom_loading_widget.dart';
 import 'package:Basera/features/profile/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:Basera/features/profile/presentation/views/widgets/profile_card.dart';
-import 'package:Basera/features/profile/presentation/views/widgets/profile_shimmer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';

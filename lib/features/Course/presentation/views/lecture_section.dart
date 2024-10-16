@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:Basera/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 class LectureSection extends StatelessWidget {
@@ -19,7 +22,7 @@ class LectureSection extends StatelessWidget {
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: Colors.white,
+                gradient: Styles.customLinerGradient(context),
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
@@ -30,58 +33,23 @@ class LectureSection extends StatelessWidget {
                   ),
                 ],
               ),
-              child: const ExpansionTile(
-                title: Text(
+              child:  ExpansionTile(
+                backgroundColor: Colors.transparent,
+                collapsedBackgroundColor: Colors.transparent,
+                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                collapsedShape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)) ,
+                title:  Text(
                   'الدرس الأول',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: Styles.style18(context).copyWith(color: Theme.of(context).colorScheme.onPrimary),
                 ),
                 children: <Widget>[
                   ListTile(
-                    title: Text('المقدمة'),
+                    title: Text('المقدمة',style: Styles.style16(context).copyWith(color: Theme.of(context).colorScheme.onPrimary),),
                   ),
                 ],
               ),
             ),
             // Second Lesson with border radius and shadow
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(16),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    spreadRadius: 1,
-                    blurRadius: 6,
-                    offset: const Offset(0, 2), // shadow y = 2
-                  ),
-                ],
-              ),
-              child: const ExpansionTile(
-                title: Text(
-                  'الدرس الثاني',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-                children: <Widget>[
-                  ListTile(
-                    leading: Icon(Icons.play_circle_filled),
-                    title: Text('المحاضرة الأولى'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.play_circle_filled),
-                    title: Text('المحاضرة الثانية'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.play_circle_filled),
-                    title: Text('المحاضرة الثالثة'),
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.play_circle_filled),
-                    title: Text('المحاضرة الرابعة'),
-                  ),
-                ],
-              ),
-            ),
             const SizedBox(
               height: 16,
             ),
