@@ -1,4 +1,6 @@
+import 'package:Basera/core/models/course.dart';
 import 'package:Basera/core/utility/functions/ui_functions.dart';
+import 'package:Basera/features/Course/data/review_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
@@ -28,10 +30,16 @@ class ReviewCubit extends Cubit<ReviewState> {
     emit(ReviewInitial());
   }
 
-  void postReview(BuildContext context) {
+  Future<void> postReview(BuildContext context , Course course) async {
     if (commentController.text.trim().isNotEmpty) {
       emit(ReviewLoading());
-
+      var result = await ReviewService.sendReview(course, userRating, commentController.text.trim());
+      result.fold((failure) {
+        emit(ReviewFailure(errMessage: failure.message));
+      }, (successMessage) {
+        emit(ReviewSuccess(message: successMessage));
+        commentController.clear();
+      });
     }
     else {
       showCustomSnackBar(context, 'Please Provide us with comment Of You, Thank you');

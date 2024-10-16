@@ -10,7 +10,7 @@ import 'package:get_it/get_it.dart';
 
 class ReviewService {
 
-  static Future<Either<Failure, String>> sendReview(Course course, int rating,
+  static Future<Either<Failure, String>> sendReview(Course course, double rating,
       String review) async {
 
     var dio = GetIt.instance<Dio>();
@@ -40,7 +40,7 @@ class ReviewService {
       }
       // Wait for the review request
       var reviewResponse = await dio.post(
-        Routes.RATE_COURSES_URL,
+        Routes.COURSE_REVIEW_URL,
         options: Options(
           headers: {
             'Authorization': 'Bearer $token',
@@ -59,8 +59,8 @@ class ReviewService {
 
       // If both succeed, return success message
       return right('Review and rating submitted successfully');
-    } catch (error) {
-      return left(ServerFailure(message: 'An error occurred: $error'));
+    }on DioException catch (error) {
+      return left(ServerFailure(message:'${error.response!.data['message']}'));
     }
   }
   }
