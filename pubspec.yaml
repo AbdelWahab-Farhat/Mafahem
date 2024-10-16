@@ -38,6 +38,7 @@ dependencies:
   firebase_storage: ^12.3.3
   pretty_dio_logger: ^1.4.0
   flutter_rating_bar: ^4.0.1
+  custom_refresh_indicator: ^4.0.1
 
 dev_dependencies:
   flutter_test:
