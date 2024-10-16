@@ -1,10 +1,12 @@
 import 'package:Basera/core/models/category.dart';
+import 'package:Basera/core/models/rater.dart';
 
 class Course {
   final int id;
   final String title;
   final String description;
-  final int subscriptionPlanId;
+  final int? subscriptionPlanId;
+  final String instructorName;
   final int instructorId;
   final String image;
   final String level;
@@ -14,10 +16,14 @@ class Course {
   final String? requirements;
   final String? createdAt;
   final String? updatedAt;
+  final double? averageRating;
   final List<Category>? categories;
+  final int enrollmentCount;
+  final List<Rater>? raters;
   // final SubscriptionPlan subscriptionPlan;
 
-  Course({
+  Course(
+     {
     required this.id,
     required this.title,
     required this.description,
@@ -32,6 +38,10 @@ class Course {
     required this.createdAt,
     required this.updatedAt,
     required this.categories,
+    required this.instructorName,
+    this.averageRating,
+    required this.enrollmentCount,
+       this.raters,
     // required this.subscriptionPlan,
   });
 
@@ -50,8 +60,19 @@ class Course {
       requirements: json['requirements'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at'],
-      categories: json['categories'] == null ? [] : (json['categories'] as List).map((cat) => Category.fromJson(cat)).toList(),
-      // subscriptionPlan: SubscriptionPlan.fromJson(json['subscription_plan']),
+      categories: json['categories'] == null
+          ? []
+          : (json['categories'] as List)
+              .map((cat) => Category.fromJson(cat))
+              .toList(),
+      instructorName: json['instructor_name'] ?? '',
+      averageRating: json['averageRating']?.toDouble(),
+      enrollmentCount: json['enrollment_count'] ?? 0,
+      raters: json['raters'] == null
+          ? []
+          : (json['raters']  as List)
+              .map((rater) => Rater.fromJson(rater))
+              .toList(),
     );
   }
 
@@ -70,9 +91,8 @@ class Course {
       'requirements': requirements,
       'created_at': createdAt,
       'updated_at': updatedAt,
-      // 'pivot': pivot.toJson(),
+      'instructor_name': instructorName,
       'categories': categories?.map((cat) => cat.toJson()).toList(),
-      // 'subscription_plan': subscriptionPlan.toJson(),
     };
   }
 }
