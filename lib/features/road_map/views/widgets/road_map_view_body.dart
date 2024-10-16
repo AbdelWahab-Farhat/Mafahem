@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:Basera/core/models/road_map.dart';
 import 'package:Basera/core/widgets/custom_error_widget.dart';
 import 'package:Basera/core/widgets/custom_loading_widget.dart';
@@ -28,26 +30,29 @@ class _RoadMapViewBodyState extends State<RoadMapViewBody> {
       appBar: const HomeAppBar(),
       body: BlocBuilder<RoadMapCubit, RoadMapState>(
         builder: (context, state) {
-          List<RoadMap> roadMaps = roadMapCubit.roadMaps;
           if (state is RoadMapFailure) {
-            return CustomErrorWidget(text: state.errMessage,);
-          }
-          else if (state is RoadMapSuccess) {
+            return CustomErrorWidget(
+              text: state.errMessage,
+            );
+          } else if (state is RoadMapSuccess) {
+            List<RoadMap> roadMaps = roadMapCubit.roadMaps;
+            log(roadMaps.length.toString());
             return ListView.builder(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
               itemCount: roadMaps.length,
               itemBuilder: (context, index) {
-                return RoadMapItem(roadMap: roadMaps[index],);
+                return RoadMapItem(
+                  roadMap: roadMaps[index],
+                );
               },
             );
           }
+          // TODO: CHANGE IT TO SHIMMER LATER
           return const CustomLoadingWidget();
         },
       ),
     );
   }
 }
-
-
 
 
