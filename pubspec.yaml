@@ -39,6 +39,9 @@ dependencies:
   pretty_dio_logger: ^1.4.0
   flutter_rating_bar: ^4.0.1
   custom_refresh_indicator: ^4.0.1
+  video_player: ^2.9.2
+  chewie: ^1.8.5
+  flutter_cache_manager: ^3.4.1
 
 dev_dependencies:
   flutter_test:
