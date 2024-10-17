@@ -1,8 +1,3 @@
-
-
-
-
-
 import 'package:Basera/core/apis/routes.dart';
 import 'package:Basera/core/error/failure.dart';
 import 'package:Basera/core/models/course.dart';
@@ -10,7 +5,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 // later we complete that
-//TODO FINISH IT WITH REFREACH 
+//TODO FINISH IT WITH REFREACH
 class GetCourseByIdService {
   static Future<Either<Failure, Course>> getCourseById(String id) async {
     try {
@@ -24,7 +19,7 @@ class GetCourseByIdService {
         ),
       );
       if (response.statusCode == 200) {
-        return right(Course.fromJson(response.data));
+        return right(Course.fromJson(response.data['data']));
       } else {
         return left(ServerFailure(message: response.data['message']));
       }
