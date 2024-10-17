@@ -1,4 +1,5 @@
 import 'package:Basera/core/models/category.dart';
+import 'package:Basera/core/models/lesson.dart';
 import 'package:Basera/core/models/rater.dart';
 
 class Course {
@@ -20,10 +21,10 @@ class Course {
   final List<Category>? categories;
   final int enrollmentCount;
   final List<Rater>? raters;
+  final List<Lesson>? lessons;
   // final SubscriptionPlan subscriptionPlan;
 
-  Course(
-     {
+  Course({
     required this.id,
     required this.title,
     required this.description,
@@ -41,7 +42,8 @@ class Course {
     required this.instructorName,
     this.averageRating,
     required this.enrollmentCount,
-       this.raters,
+    this.raters,
+    this.lessons,
     // required this.subscriptionPlan,
   });
 
@@ -52,7 +54,7 @@ class Course {
       description: json['description'],
       subscriptionPlanId: json['subscription_plan_id'],
       instructorId: json['instructor_id'],
-      image: json['image'],
+      image: json['image'] ?? 'URL',
       level: json['level'],
       price: json['price'],
       duration: json['duration'],
@@ -70,8 +72,13 @@ class Course {
       enrollmentCount: json['enrollment_count'] ?? 0,
       raters: json['raters'] == null
           ? []
-          : (json['raters']  as List)
+          : (json['raters'] as List)
               .map((rater) => Rater.fromJson(rater))
+              .toList(),
+      lessons: json['lessons'] == null
+          ? []
+          : (json['lessons'] as List)
+              .map((lesson) => Lesson.fromJson(lesson))
               .toList(),
     );
   }
