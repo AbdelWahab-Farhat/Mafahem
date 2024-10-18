@@ -28,7 +28,10 @@ class GetUserCartService {
       // Check for a successful response
       if (result.statusCode == 200) {
         // Parse the response data into CartModel
-        return right(Cart.fromJson(result.data['data'] as Map<String, dynamic>));
+        if (result.data['data'] == null || result.data['data'].isEmpty) {
+          return right(Cart(courses: [],id: 9999 , userId: 0000));
+        }
+        return right(Cart.fromJson(result.data['data']));
       }
       if (result.statusCode == 404) {
         return left(ServerFailure(message: 'Cart is Empty.'));}
