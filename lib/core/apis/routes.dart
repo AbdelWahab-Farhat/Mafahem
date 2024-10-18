@@ -1,5 +1,5 @@
 abstract class Routes {
-  static const String BASE_URL = 'http://192.168.243.140:3000/api';
+  static const String BASE_URL = 'http://192.168.182.140:3000/api';
   static const String LOGIN_URL = '$BASE_URL/login';
   static const String LOGOUT_URL = '$BASE_URL/logout';
   static const String REGISTER_URL = '$BASE_URL/register';
@@ -21,4 +21,9 @@ abstract class Routes {
   static const String GET_COURSE_BY_ID_URL="$BASE_URL/courses";
   static const String ADD_TO_USER_CART="$BASE_URL/carts";
   static const String GET_USER_COURES_URL ="$BASE_URL/users/courses/get";
+
+  static String MARK_LEACTURE_PROGRESS_COMPLETED(String courseId , String lessonId , String lectureId) {
+      return '$BASE_URL/courses/$courseId/lessons/$lessonId/lectures/$lessonId/complete';
+  }
+
 }
