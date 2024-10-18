@@ -79,7 +79,7 @@ class _CourseViewBodyState extends State<CourseViewBody> {
                 child: TabBarView(
                   children: [
                     AboutSection(course: widget.course),
-                    const LectureSection(),
+                    LectureSection(course: widget.course,),
                     const SimilarCoursesSection(),
                   ],
                 ),
