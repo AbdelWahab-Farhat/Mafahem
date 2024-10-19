@@ -1,7 +1,6 @@
 import 'dart:developer';
-
-import 'package:Basera/core/models/lecture.dart';
-import 'package:Basera/features/Course/data/check_progress_service.dart';
+import 'package:Mafaheem/core/models/lecture.dart';
+import 'package:Mafaheem/features/Course/data/check_progress_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';

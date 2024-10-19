@@ -1,14 +1,14 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/core/widgets/custom_divider.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/home/presentation/views/widgets/section_title.dart';
-import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/setting_header.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/core/widgets/custom_divider.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/section_title.dart';
+import 'package:Mafaheem/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/setting_header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/edit_account_section.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/more_section.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/edit_account_section.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/more_section.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SettingViewBody extends StatelessWidget {

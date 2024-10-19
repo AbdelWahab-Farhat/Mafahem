@@ -1,10 +1,10 @@
 import 'dart:async';
-import 'package:Basera/features/root/presentation/views/root_view.dart';
+import 'package:Mafaheem/features/root/presentation/views/root_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
-import 'package:Basera/features/splash/presentation/views/splash_view.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/login_view.dart';
+import 'package:Mafaheem/features/splash/presentation/views/splash_view.dart';
 
 class AuthGuard extends StatefulWidget {
   const AuthGuard({super.key});

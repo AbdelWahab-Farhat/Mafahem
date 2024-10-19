@@ -1,5 +1,5 @@
-import 'package:Basera/core/models/category.dart';
-import 'package:Basera/features/category/data/get_categories_service.dart';
+import 'package:Mafaheem/core/models/category.dart';
+import 'package:Mafaheem/features/category/data/get_categories_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';

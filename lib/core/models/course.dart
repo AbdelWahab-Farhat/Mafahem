@@ -1,7 +1,7 @@
-import 'package:Basera/core/models/category.dart';
-import 'package:Basera/core/models/lesson.dart';
-import 'package:Basera/core/models/rater.dart';
-import 'package:Basera/core/models/review.dart';
+import 'package:Mafaheem/core/models/category.dart';
+import 'package:Mafaheem/core/models/lesson.dart';
+import 'package:Mafaheem/core/models/rater.dart';
+import 'package:Mafaheem/core/models/review.dart';
 
 class Course {
   final int id;

@@ -1,4 +1,4 @@
-import 'package:Basera/features/search/views/widgets/splash_view_body.dart';
+import 'package:Mafaheem/features/search/views/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,20 +1,15 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/functions/ui_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/core/widgets/custom_textfield.dart';
-import 'package:Basera/features/Course/data/cal_user_rate_service.dart';
-import 'package:Basera/features/Course/data/show_review_dialog.dart';
-import 'package:Basera/features/Course/presentation/manager/review_cubit/review_cubit.dart';
-import 'package:Basera/features/Course/presentation/views/about_section.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/about_course_text_icon.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/comment_rate_list_view.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/courseRating.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/mini_section.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/Course/data/cal_user_rate_service.dart';
+import 'package:Mafaheem/features/Course/data/show_review_dialog.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/about_course_text_icon.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/comment_rate_list_view.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/courseRating.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/mini_section.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 
 class AboutSection extends StatelessWidget {
   final Course course;

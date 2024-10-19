@@ -1,7 +1,7 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/date_badge_widget.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/overlay.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/work_shop_item_content.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/date_badge_widget.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/overlay.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/work_shop_item_content.dart';
 import 'package:flutter/material.dart';
 
 class WorkShopItem extends StatelessWidget {

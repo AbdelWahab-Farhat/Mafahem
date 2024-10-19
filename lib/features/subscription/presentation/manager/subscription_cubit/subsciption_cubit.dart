@@ -1,9 +1,7 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/subscription/presentation/views/widgets/subPriceCard.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/subscription/presentation/views/widgets/subPriceCard.dart';
 import 'package:bloc/bloc.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';

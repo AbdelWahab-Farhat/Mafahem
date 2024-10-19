@@ -1,4 +1,3 @@
-import 'package:Basera/core/models/road_map.dart';
 
 class Category {
   final int id;

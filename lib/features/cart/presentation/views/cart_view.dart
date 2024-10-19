@@ -1,7 +1,7 @@
-import 'package:Basera/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
-import 'package:Basera/features/cart/presentation/manager/coupon_cubit/coupon_cubit.dart';
-import 'package:Basera/features/cart/presentation/manager/scroll_cubit/scroll_cubit.dart';
-import 'package:Basera/features/cart/presentation/views/widgets/cart_view_body.dart';
+import 'package:Mafaheem/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
+import 'package:Mafaheem/features/cart/presentation/manager/coupon_cubit/coupon_cubit.dart';
+import 'package:Mafaheem/features/cart/presentation/manager/scroll_cubit/scroll_cubit.dart';
+import 'package:Mafaheem/features/cart/presentation/views/widgets/cart_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

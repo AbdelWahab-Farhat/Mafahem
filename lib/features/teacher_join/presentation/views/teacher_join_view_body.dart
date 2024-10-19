@@ -1,12 +1,10 @@
-import 'package:Basera/core/utility/functions/validate_functions.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/core/widgets/custom_textfield.dart';
-import 'package:Basera/features/teacher_join/presentation/manager/collect_data_cubit/collect_data_cubit.dart';
-import 'package:Basera/features/teacher_join/presentation/views/widgets/PDF_upload_area.dart';
-import 'package:Basera/features/teacher_join/presentation/views/widgets/send_button.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:Mafaheem/core/utility/functions/validate_functions.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/core/widgets/custom_textfield.dart';
+import 'package:Mafaheem/features/teacher_join/presentation/manager/collect_data_cubit/collect_data_cubit.dart';
+import 'package:Mafaheem/features/teacher_join/presentation/views/widgets/PDF_upload_area.dart';
+import 'package:Mafaheem/features/teacher_join/presentation/views/widgets/send_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,4 +1,4 @@
-import 'package:Basera/features/notification/presentation/views/widgets/notification_view_body.dart';
+import 'package:Mafaheem/features/notification/presentation/views/widgets/notification_view_body.dart';
 import 'package:flutter/material.dart';
 
 class NotificationView extends StatelessWidget {

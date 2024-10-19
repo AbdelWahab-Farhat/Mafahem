@@ -1,6 +1,6 @@
-import 'package:Basera/features/search/views/widgets/search_grid_item_lower_content.dart';
-import 'package:Basera/features/search/views/widgets/search_grid_item_upper_content.dart';
-import 'package:Basera/features/search/views/widgets/tag_widget.dart';
+import 'package:Mafaheem/features/search/views/widgets/search_grid_item_lower_content.dart';
+import 'package:Mafaheem/features/search/views/widgets/search_grid_item_upper_content.dart';
+import 'package:Mafaheem/features/search/views/widgets/tag_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchGridItem extends StatelessWidget {

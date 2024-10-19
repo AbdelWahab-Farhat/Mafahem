@@ -1,5 +1,5 @@
-import 'package:Basera/features/road_map/views/widgets/subtitle_and_Price.dart';
-import 'package:Basera/features/road_map/views/widgets/title_and_rating.dart';
+import 'package:Mafaheem/features/road_map/views/widgets/subtitle_and_Price.dart';
+import 'package:Mafaheem/features/road_map/views/widgets/title_and_rating.dart';
 import 'package:flutter/material.dart';
 class RoadMapItemDetails extends StatelessWidget {
   final String title;

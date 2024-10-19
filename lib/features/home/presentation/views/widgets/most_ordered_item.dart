@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/home/presentation/views/widgets/most_ordered_item_first_row.dart';
-import 'package:Basera/features/home/presentation/views/widgets/most_ordered_item_second_row.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/most_ordered_item_first_row.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/most_ordered_item_second_row.dart';
 import 'package:flutter/material.dart';
 
 class MostOrderedItem extends StatelessWidget {

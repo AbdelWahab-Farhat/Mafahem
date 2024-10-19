@@ -1,8 +1,7 @@
-
-import 'package:Basera/core/models/cart.dart';
-import 'package:Basera/features/cart/data/bill_service.dart';
-import 'package:Basera/features/cart/data/get_user_cart_service.dart';
-import 'package:Basera/features/cart/data/remove_from_user_cart_service.dart';
+import 'package:Mafaheem/core/models/cart.dart';
+import 'package:Mafaheem/features/cart/data/bill_service.dart';
+import 'package:Mafaheem/features/cart/data/get_user_cart_service.dart';
+import 'package:Mafaheem/features/cart/data/remove_from_user_cart_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

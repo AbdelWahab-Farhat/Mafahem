@@ -1,6 +1,6 @@
-import 'package:Basera/core/models/category.dart';
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/features/category/data/get_courses_by_category_service.dart';
+import 'package:Mafaheem/core/models/category.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/features/category/data/get_courses_by_category_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

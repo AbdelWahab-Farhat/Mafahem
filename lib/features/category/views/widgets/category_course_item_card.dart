@@ -1,7 +1,7 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/Course/presentation/views/course_view.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/Course/presentation/views/course_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';

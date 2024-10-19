@@ -1,5 +1,5 @@
-import 'package:Basera/core/models/rater.dart';
-import 'package:Basera/core/models/review.dart';
+import 'package:Mafaheem/core/models/rater.dart';
+import 'package:Mafaheem/core/models/review.dart';
 
 
 // NO NEED IT FOR NOW

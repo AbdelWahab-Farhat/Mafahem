@@ -1,4 +1,4 @@
-import 'package:Basera/features/setting/presentation/views/widgets/setting_view_body.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/setting_view_body.dart';
 import 'package:flutter/material.dart';
 
 class SettingView extends StatelessWidget {

@@ -1,6 +1,6 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/road_map/views/widgets/road_map_course_item.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/road_map/views/widgets/road_map_course_item.dart';
 import 'package:flutter/material.dart';
 
 class RoadMapCoursesViewBody extends StatelessWidget {

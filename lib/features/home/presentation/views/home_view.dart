@@ -1,4 +1,4 @@
-import 'package:Basera/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
+import 'package:Mafaheem/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

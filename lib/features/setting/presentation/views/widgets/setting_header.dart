@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_avatar_widget.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_avatar_widget.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

@@ -1,8 +1,8 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/functions/ui_functions.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/core/widgets/custom_loading_widget.dart';
-import 'package:Basera/features/Auth/presentation/manager/forget_password_cubit/forget_password_cubit.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/functions/ui_functions.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/core/widgets/custom_loading_widget.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/forget_password_cubit/forget_password_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

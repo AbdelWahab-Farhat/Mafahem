@@ -1,4 +1,4 @@
-import 'package:Basera/features/Course/presentation/views/widgets/rating_bar.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/rating_bar.dart';
 import 'package:flutter/material.dart';
 
 class CourseRatings extends StatelessWidget {

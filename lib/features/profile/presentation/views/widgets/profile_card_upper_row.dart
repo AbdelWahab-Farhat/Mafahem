@@ -1,4 +1,4 @@
-import 'package:Basera/features/profile/presentation/views/widgets/profile_card_content.dart';
+import 'package:Mafaheem/features/profile/presentation/views/widgets/profile_card_content.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCardUpperRow extends StatelessWidget {

@@ -1,4 +1,4 @@
-import 'package:Basera/features/on_boarding/presentation/views/widgets/on_boarding_content.dart';
+import 'package:Mafaheem/features/on_boarding/presentation/views/widgets/on_boarding_content.dart';
 import 'package:flutter/material.dart';
 
 class CustomPageItem extends StatelessWidget {

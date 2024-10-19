@@ -1,11 +1,8 @@
-import 'package:Basera/core/enums/course_status.dart';
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/functions/ui_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/Course/data/add_to_cart_service.dart';
-import 'package:Basera/features/Course/presentation/manager/course_cubit/course_cubit.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/course_cubit/course_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';

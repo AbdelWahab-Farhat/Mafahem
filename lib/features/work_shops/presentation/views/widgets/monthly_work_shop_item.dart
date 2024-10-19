@@ -1,7 +1,6 @@
-import 'package:Basera/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
 import 'package:flutter/material.dart';
-
-import 'package:Basera/core/utility/styles.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
 
 class MonthlyWorkShopItem extends StatelessWidget {
   const MonthlyWorkShopItem({

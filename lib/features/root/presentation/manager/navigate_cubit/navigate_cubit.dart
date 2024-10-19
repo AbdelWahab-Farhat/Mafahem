@@ -1,6 +1,6 @@
-import 'package:Basera/features/category/views/category_view.dart';
-import 'package:Basera/features/home/presentation/views/home_view.dart';
-import 'package:Basera/features/road_map/views/road_map_view.dart';
+import 'package:Mafaheem/features/category/views/category_view.dart';
+import 'package:Mafaheem/features/home/presentation/views/home_view.dart';
+import 'package:Mafaheem/features/road_map/views/road_map_view.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';

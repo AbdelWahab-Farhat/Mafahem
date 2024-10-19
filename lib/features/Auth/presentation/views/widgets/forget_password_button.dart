@@ -1,5 +1,5 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/features/Auth/presentation/views/forget_password_view.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/forget_password_view.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

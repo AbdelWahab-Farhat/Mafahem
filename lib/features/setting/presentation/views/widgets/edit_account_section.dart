@@ -1,10 +1,10 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/functions/ui_functions.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
-import 'package:Basera/features/profile_edit/presentation/views/edit_profile_view.dart';
-import 'package:Basera/features/setting/data/log_out_service.dart';
-import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/setting_list_tile.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/functions/ui_functions.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/login_view.dart';
+import 'package:Mafaheem/features/profile_edit/presentation/views/edit_profile_view.dart';
+import 'package:Mafaheem/features/setting/data/log_out_service.dart';
+import 'package:Mafaheem/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/setting_list_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

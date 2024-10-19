@@ -1,9 +1,9 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/subscription/presentation/manager/subscription_cubit/subsciption_cubit.dart';
-import 'package:Basera/features/subscription/presentation/views/free_subscription_page.dart';
-import 'package:Basera/features/subscription/presentation/views/premium_subscription_page.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/subscription/presentation/manager/subscription_cubit/subsciption_cubit.dart';
+import 'package:Mafaheem/features/subscription/presentation/views/free_subscription_page.dart';
+import 'package:Mafaheem/features/subscription/presentation/views/premium_subscription_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

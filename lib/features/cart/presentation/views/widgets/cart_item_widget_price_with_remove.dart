@@ -1,7 +1,7 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

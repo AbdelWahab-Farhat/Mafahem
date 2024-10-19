@@ -1,5 +1,5 @@
-import 'package:Basera/features/root/presentation/manager/navigate_cubit/navigate_cubit.dart';
-import 'package:Basera/features/root/presentation/views/widgets/root_view_body.dart';
+import 'package:Mafaheem/features/root/presentation/manager/navigate_cubit/navigate_cubit.dart';
+import 'package:Mafaheem/features/root/presentation/views/widgets/root_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

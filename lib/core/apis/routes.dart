@@ -1,5 +1,5 @@
 abstract class Routes {
-  static const String BASE_URL = 'http://192.168.112.140:3000/api';
+  static const String BASE_URL = 'http://192.168.221.140:3000/api';
   static const String LOGIN_URL = '$BASE_URL/login';
   static const String LOGOUT_URL = '$BASE_URL/logout';
   static const String REGISTER_URL = '$BASE_URL/register';

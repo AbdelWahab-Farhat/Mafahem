@@ -1,5 +1,4 @@
-import 'package:Basera/core/widgets/custom_loading_widget.dart';
-import 'package:Basera/features/splash/presentation/views/widgets/custom_app_title.dart';
+import 'package:Mafaheem/core/widgets/custom_loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 class SplashViewBody extends StatelessWidget {

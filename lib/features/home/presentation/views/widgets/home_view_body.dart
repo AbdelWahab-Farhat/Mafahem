@@ -1,15 +1,15 @@
 import 'dart:io';
-import 'package:Basera/core/apis/fire_base_api.dart';
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/widgets/custom_search_field.dart';
-import 'package:Basera/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
-import 'package:Basera/features/home/presentation/views/widgets/categories_section.dart';
-import 'package:Basera/features/home/presentation/views/widgets/custom_carouse_slider.dart';
-import 'package:Basera/features/home/presentation/views/widgets/home_app_bar.dart';
-import 'package:Basera/features/home/presentation/views/widgets/most_ordered_list_view.dart';
-import 'package:Basera/features/home/presentation/views/widgets/section_title.dart';
-import 'package:Basera/features/home/presentation/views/widgets/work_shop_section.dart';
-import 'package:Basera/features/search/views/search_view.dart';
+import 'package:Mafaheem/core/apis/fire_base_api.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/widgets/custom_search_field.dart';
+import 'package:Mafaheem/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/categories_section.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/custom_carouse_slider.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/home_app_bar.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/most_ordered_list_view.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/section_title.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/work_shop_section.dart';
+import 'package:Mafaheem/features/search/views/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

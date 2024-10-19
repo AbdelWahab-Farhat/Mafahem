@@ -1,7 +1,7 @@
-import 'package:Basera/core/enums/course_status.dart';
-import 'package:Basera/core/error/failure.dart';
-import 'package:Basera/features/cart/data/get_user_cart_service.dart';
-import 'package:Basera/features/profile/data/fetch_user_courses_service.dart';
+import 'package:Mafaheem/core/enums/course_status.dart';
+import 'package:Mafaheem/core/error/failure.dart';
+import 'package:Mafaheem/features/cart/data/get_user_cart_service.dart';
+import 'package:Mafaheem/features/profile/data/fetch_user_courses_service.dart';
 import 'package:dartz/dartz.dart';
 
 class PropertyService {

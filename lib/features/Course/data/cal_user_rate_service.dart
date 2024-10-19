@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/models/rater.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/models/rater.dart';
 
 class CalUserRateService {
    static int _numberOfUserByStars(Course course, starNumber) {

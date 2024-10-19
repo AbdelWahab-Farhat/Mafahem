@@ -1,4 +1,4 @@
-import 'package:Basera/core/models/course.dart';
+import 'package:Mafaheem/core/models/course.dart';
 
 class BillService{
     static int numberOfCourses(List<Course> courses){

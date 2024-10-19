@@ -1,4 +1,4 @@
-import 'package:Basera/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
 import 'package:flutter/material.dart';
 class CustomErrorWidget extends StatelessWidget {
   final String text;

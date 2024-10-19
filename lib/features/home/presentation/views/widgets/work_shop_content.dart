@@ -1,7 +1,7 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/work_shops/presentation/views/work_shops_view.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/work_shops_view.dart';
 import 'package:flutter/material.dart';
 
 class WorkShopContent extends StatelessWidget {

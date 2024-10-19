@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/features/Course/presentation/views/course_view.dart';
-import 'package:Basera/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/features/Course/presentation/views/course_view.dart';
+import 'package:Mafaheem/features/home/presentation/manager/promo_courses_cubit/promo_courses_cubit.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';

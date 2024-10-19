@@ -1,5 +1,5 @@
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/notification/presentation/views/widgets/notification_widget_item.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/notification/presentation/views/widgets/notification_widget_item.dart';
 import 'package:flutter/material.dart';
 
 class NotificationViewBody extends StatelessWidget {

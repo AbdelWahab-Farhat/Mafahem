@@ -1,9 +1,4 @@
-
-
-
-
-
-import 'package:Basera/core/models/lecture.dart';
+import 'package:Mafaheem/core/models/lecture.dart';
 
 class Lesson {
   final int id;

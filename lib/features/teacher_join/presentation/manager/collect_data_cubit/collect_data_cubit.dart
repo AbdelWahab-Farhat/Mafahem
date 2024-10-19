@@ -1,8 +1,7 @@
 import 'dart:io';
 
-import 'package:Basera/core/apis/firebase_upload_api.dart';
-import 'package:Basera/core/error/failure.dart';
-import 'package:Basera/features/teacher_join/data/send_teacher_data_service.dart';
+import 'package:Mafaheem/core/apis/firebase_upload_api.dart';
+import 'package:Mafaheem/features/teacher_join/data/send_teacher_data_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';

@@ -1,15 +1,12 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/core/widgets/custom_card_list_view_shimmer.dart';
-import 'package:Basera/core/widgets/custom_empty_state_widget.dart';
-import 'package:Basera/features/category/manager/category_courses_cubit/category_courses_cubit.dart';
-import 'package:Basera/features/category/views/widgets/category_course_item_card.dart';
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/core/widgets/custom_card_list_view_shimmer.dart';
+import 'package:Mafaheem/core/widgets/custom_empty_state_widget.dart';
+import 'package:Mafaheem/features/category/manager/category_courses_cubit/category_courses_cubit.dart';
+import 'package:Mafaheem/features/category/views/widgets/category_course_item_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:Basera/core/models/course.dart';
-import 'package:shimmer/shimmer.dart';
+
 
 class CategoryCoursesViewBody extends StatelessWidget {
   const CategoryCoursesViewBody({super.key});

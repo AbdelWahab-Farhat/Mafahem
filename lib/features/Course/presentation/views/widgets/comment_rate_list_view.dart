@@ -1,11 +1,11 @@
 import 'dart:developer';
 
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/models/rater.dart';
-import 'package:Basera/core/models/review.dart';
-import 'package:Basera/features/Course/data/get_full_review.dart';
-import 'package:Basera/features/Course/presentation/manager/comment_cubit/comment_cubit.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/comment_widget.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/models/rater.dart';
+import 'package:Mafaheem/core/models/review.dart';
+import 'package:Mafaheem/features/Course/data/get_full_review.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/comment_cubit/comment_cubit.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/comment_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

@@ -1,5 +1,5 @@
-import 'package:Basera/features/work_shops/presentation/views/widgets/image_content.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/list_of_text_tags.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/image_content.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/list_of_text_tags.dart';
 import 'package:flutter/material.dart';
 
 class WorkShopItemContent extends StatelessWidget {

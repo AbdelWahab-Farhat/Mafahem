@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/features/Auth/presentation/views/login_view.dart';
-import 'package:Basera/features/on_boarding/presentation/views/widgets/custom_page_item.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/login_view.dart';
+import 'package:Mafaheem/features/on_boarding/presentation/views/widgets/custom_page_item.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';

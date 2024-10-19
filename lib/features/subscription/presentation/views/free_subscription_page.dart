@@ -1,8 +1,8 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/subscription/presentation/manager/subscription_cubit/subsciption_cubit.dart';
-import 'package:Basera/features/subscription/presentation/views/widgets/subscription_view_body.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/subscription/presentation/manager/subscription_cubit/subsciption_cubit.dart';
+import 'package:Mafaheem/features/subscription/presentation/views/widgets/subscription_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

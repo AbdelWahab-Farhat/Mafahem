@@ -1,5 +1,5 @@
-import 'package:Basera/core/apis/firebase_upload_api.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/core/apis/firebase_upload_api.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';

@@ -1,10 +1,10 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/widgets/custom_card_list_view_shimmer.dart';
-import 'package:Basera/core/widgets/custom_empty_state_widget.dart';
-import 'package:Basera/core/widgets/custom_error_widget.dart';
-import 'package:Basera/features/Course/presentation/manager/filter_courses_cubit/filter_courses_cubit.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/similar_courses_item.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_card_list_view_shimmer.dart';
+import 'package:Mafaheem/core/widgets/custom_empty_state_widget.dart';
+import 'package:Mafaheem/core/widgets/custom_error_widget.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/filter_courses_cubit/filter_courses_cubit.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/similar_courses_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

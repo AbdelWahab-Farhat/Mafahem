@@ -1,4 +1,4 @@
-import 'package:Basera/core/utility/styles.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 class MiniSection extends StatelessWidget {
   final String title;

@@ -1,13 +1,12 @@
-
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/models/lecture.dart';
-import 'package:Basera/core/models/lesson.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/current_lecture_title.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/lecture_list_view.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/video_player_widget.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/models/lecture.dart';
+import 'package:Mafaheem/core/models/lesson.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/current_lecture_title.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/lecture_list_view.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/video_player_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

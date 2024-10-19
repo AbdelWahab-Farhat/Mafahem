@@ -1,5 +1,5 @@
-import 'package:Basera/features/profile/presentation/views/widgets/profile_card_lower_row.dart';
-import 'package:Basera/features/profile/presentation/views/widgets/profile_card_upper_row.dart';
+import 'package:Mafaheem/features/profile/presentation/views/widgets/profile_card_lower_row.dart';
+import 'package:Mafaheem/features/profile/presentation/views/widgets/profile_card_upper_row.dart';
 import 'package:flutter/material.dart';
 
 class ProfileCard extends StatelessWidget {

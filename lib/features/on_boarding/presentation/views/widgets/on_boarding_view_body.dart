@@ -1,5 +1,5 @@
-import 'package:Basera/core/widgets/custom_filled_button.dart';
-import 'package:Basera/features/on_boarding/presentation/manager/onboarding_cubit.dart';
+import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/on_boarding/presentation/manager/onboarding_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

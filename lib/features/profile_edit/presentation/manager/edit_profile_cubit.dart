@@ -1,9 +1,7 @@
-import 'package:Basera/core/enums/image_enum.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/profile_edit/data/take_photo_service.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/profile_edit/data/take_photo_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get_it/get_it.dart';
 import 'package:meta/meta.dart';
 

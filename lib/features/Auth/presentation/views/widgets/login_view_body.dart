@@ -1,10 +1,10 @@
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/features/Auth/presentation/views/register_view.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/login_button.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/login_fields_section.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/o_auth_section.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/section_divder.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/toggle_auth_views.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/register_view.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/login_button.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/login_fields_section.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/o_auth_section.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/section_divder.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/toggle_auth_views.dart';
 import 'package:flutter/material.dart';
 import 'forget_password_button.dart';
 import 'logo_title.dart';

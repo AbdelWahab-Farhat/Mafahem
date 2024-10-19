@@ -1,6 +1,6 @@
-import 'package:Basera/core/widgets/custom_error_widget.dart';
-import 'package:Basera/core/widgets/custom_loading_widget.dart';
-import 'package:Basera/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
+import 'package:Mafaheem/core/widgets/custom_error_widget.dart';
+import 'package:Mafaheem/core/widgets/custom_loading_widget.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
 import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,13 +1,10 @@
-import 'package:Basera/core/models/lecture.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/lesson_view_body.dart';
+import 'package:Mafaheem/core/models/lecture.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/Course/presentation/manager/video_player_cubit/video_player_cubit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shimmer/shimmer.dart';
-import 'package:video_player/video_player.dart';
 
 class CurrentLectureTitle extends StatelessWidget {
   const CurrentLectureTitle({

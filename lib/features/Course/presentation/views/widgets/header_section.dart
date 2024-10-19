@@ -1,6 +1,6 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/rate_with_student_number.dart';
-import 'package:Basera/features/Course/presentation/views/widgets/title_with_trainer.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/rate_with_student_number.dart';
+import 'package:Mafaheem/features/Course/presentation/views/widgets/title_with_trainer.dart';
 import 'package:flutter/material.dart';
 
 class HeaderSection extends StatelessWidget {

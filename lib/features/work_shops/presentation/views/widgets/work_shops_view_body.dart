@@ -1,7 +1,7 @@
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/monthly_work_shop_list_view.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/work_shop_Item.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/monthly_work_shop_list_view.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/work_shop_Item.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

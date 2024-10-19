@@ -1,11 +1,11 @@
 import 'dart:developer';
-import 'package:Basera/core/models/road_map.dart';
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/road_map/data/calculate_road_map_service.dart';
-import 'package:Basera/features/road_map/views/road_map_courses_view.dart';
-import 'package:Basera/features/road_map/views/widgets/road_map_item_details.dart';
-import 'package:Basera/features/work_shops/presentation/views/widgets/overlay.dart';
+import 'package:Mafaheem/core/models/road_map.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/road_map/data/calculate_road_map_service.dart';
+import 'package:Mafaheem/features/road_map/views/road_map_courses_view.dart';
+import 'package:Mafaheem/features/road_map/views/widgets/road_map_item_details.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/overlay.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 

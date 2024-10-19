@@ -1,5 +1,5 @@
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/teacher_join/presentation/manager/upload_pdf_cubit/upload_pdf_cubit.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/teacher_join/presentation/manager/upload_pdf_cubit/upload_pdf_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

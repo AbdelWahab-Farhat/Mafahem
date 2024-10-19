@@ -1,10 +1,10 @@
 
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/models/road_map.dart';
-import 'package:Basera/features/Auth/data/certificate.dart';
-import 'package:Basera/features/profile/data/fetch_user_certificate_service.dart';
-import 'package:Basera/features/profile/data/fetch_user_courses_service.dart';
-import 'package:Basera/features/profile/data/fetch_user_road_maps_service.dart';
+import 'package:Mafaheem/core/models/certificate.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/models/road_map.dart';
+import 'package:Mafaheem/features/profile/data/fetch_user_certificate_service.dart';
+import 'package:Mafaheem/features/profile/data/fetch_user_courses_service.dart';
+import 'package:Mafaheem/features/profile/data/fetch_user_road_maps_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

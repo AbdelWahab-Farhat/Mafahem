@@ -1,10 +1,10 @@
 import 'dart:developer';
-import 'package:Basera/core/dependency_injection.dart';
-import 'package:Basera/core/utility/theme.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/Auth/presentation/views/auth_guard.dart';
-import 'package:Basera/features/on_boarding/presentation/views/on_boarding_view.dart';
-import 'package:Basera/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
+import 'package:Mafaheem/core/dependency_injection.dart';
+import 'package:Mafaheem/core/utility/theme.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/auth_guard.dart';
+import 'package:Mafaheem/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:Mafaheem/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/widgets/custom_icon_button.dart';
-import 'package:Basera/core/widgets/custom_search_field.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/widgets/custom_icon_button.dart';
+import 'package:Mafaheem/core/widgets/custom_search_field.dart';
 import 'package:flutter/material.dart';
 
 class SearchSection extends StatelessWidget {

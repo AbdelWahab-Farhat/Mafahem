@@ -1,4 +1,4 @@
-import 'package:Basera/features/work_shops/presentation/views/widgets/monthly_work_shop_item.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/monthly_work_shop_item.dart';
 import 'package:flutter/material.dart';
 
 class MonthlyWorkShopListView extends StatelessWidget {

@@ -1,7 +1,5 @@
 import 'dart:io';
-
-import 'package:Basera/core/apis/routes.dart';
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/apis/routes.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';

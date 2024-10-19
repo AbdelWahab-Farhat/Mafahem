@@ -1,8 +1,7 @@
 import 'dart:ui';
-
-import 'package:Basera/core/models/category.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/category/views/widgets/category_content.dart';
+import 'package:Mafaheem/core/models/category.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/category/views/widgets/category_content.dart';
 import 'package:flutter/material.dart';
 
 class CategoryStackedRow extends StatelessWidget {

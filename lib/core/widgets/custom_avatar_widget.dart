@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:Basera/core/enums/image_enum.dart';
-import 'package:Basera/core/utility/size_config.dart';
+import 'package:Mafaheem/core/enums/image_enum.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart'; // Import for SVG handling

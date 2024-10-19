@@ -1,12 +1,10 @@
-import 'dart:developer';
-
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/Auth/presentation/manager/token/token_cubit.dart';
-import 'package:Basera/features/cart/presentation/views/cart_view.dart';
-import 'package:Basera/features/notification/presentation/views/notification_view.dart';
-import 'package:Basera/features/profile/presentation/views/profile_view.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/cart/presentation/views/cart_view.dart';
+import 'package:Mafaheem/features/notification/presentation/views/notification_view.dart';
+import 'package:Mafaheem/features/profile/presentation/views/profile_view.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

@@ -1,4 +1,4 @@
-import 'package:Basera/features/work_shops/presentation/views/widgets/work_shops_view_body.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/widgets/work_shops_view_body.dart';
 import 'package:flutter/material.dart';
 
 class WorkShopsView extends StatelessWidget {

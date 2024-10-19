@@ -1,5 +1,5 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/home/presentation/views/widgets/work_shop_content.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/home/presentation/views/widgets/work_shop_content.dart';
 import 'package:flutter/material.dart';
 
 class WorkShopsSection extends StatelessWidget {

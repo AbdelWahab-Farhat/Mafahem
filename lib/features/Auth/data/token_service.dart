@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:Basera/core/apis/routes.dart';
-import 'package:Basera/core/error/failure.dart';
-import 'package:Basera/core/models/user.dart';
+import 'package:Mafaheem/core/apis/routes.dart';
+import 'package:Mafaheem/core/error/failure.dart';
+import 'package:Mafaheem/core/models/user.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';

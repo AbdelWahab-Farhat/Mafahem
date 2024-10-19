@@ -1,6 +1,6 @@
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/features/profile/presentation/manager/toggle_profile_views_cubit/toggle_profile_views_cubit.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/profile/presentation/manager/toggle_profile_views_cubit/toggle_profile_views_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:toggle_switch/toggle_switch.dart';

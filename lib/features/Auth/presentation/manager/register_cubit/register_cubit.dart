@@ -1,5 +1,5 @@
-import 'package:Basera/core/dependency_injection.dart';
-import 'package:Basera/features/Auth/data/register_service.dart';
+import 'package:Mafaheem/core/dependency_injection.dart';
+import 'package:Mafaheem/features/Auth/data/register_service.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

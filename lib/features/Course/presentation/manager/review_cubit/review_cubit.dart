@@ -1,6 +1,6 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/functions/ui_functions.dart';
-import 'package:Basera/features/Course/data/review_service.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/functions/ui_functions.dart';
+import 'package:Mafaheem/features/Course/data/review_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';

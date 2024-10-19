@@ -1,7 +1,7 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/models/rater.dart';
-import 'package:Basera/core/models/review.dart';
-import 'package:Basera/core/utility/styles.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/models/rater.dart';
+import 'package:Mafaheem/core/models/review.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 

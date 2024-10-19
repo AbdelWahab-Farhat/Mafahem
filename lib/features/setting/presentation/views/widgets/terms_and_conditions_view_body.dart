@@ -1,5 +1,5 @@
-import 'package:Basera/core/widgets/custom_app_bar.dart';
-import 'package:Basera/features/setting/presentation/views/widgets/term_point_widget.dart';
+import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
+import 'package:Mafaheem/features/setting/presentation/views/widgets/term_point_widget.dart';
 import 'package:flutter/material.dart';
 
 class TermsAndConditionsViewBody extends StatelessWidget {

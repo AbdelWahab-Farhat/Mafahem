@@ -1,20 +1,16 @@
 import 'dart:developer';
-
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_card_list_view_shimmer.dart';
-import 'package:Basera/core/widgets/custom_empty_state_widget.dart';
-import 'package:Basera/core/widgets/custom_error_widget.dart';
-import 'package:Basera/core/widgets/custom_loading_widget.dart';
-import 'package:Basera/features/Course/data/get_course_by_id.dart';
-import 'package:Basera/features/Course/presentation/views/course_view.dart';
-import 'package:Basera/features/profile/presentation/manager/user_cubit/user_cubit.dart';
-import 'package:Basera/features/profile/presentation/views/widgets/profile_card.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_card_list_view_shimmer.dart';
+import 'package:Mafaheem/core/widgets/custom_empty_state_widget.dart';
+import 'package:Mafaheem/core/widgets/custom_error_widget.dart';
+import 'package:Mafaheem/features/Course/data/get_course_by_id.dart';
+import 'package:Mafaheem/features/Course/presentation/views/course_view.dart';
+import 'package:Mafaheem/features/profile/presentation/manager/user_cubit/user_cubit.dart';
+import 'package:Mafaheem/features/profile/presentation/views/widgets/profile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:shimmer/shimmer.dart';
 
 class MyCourseView extends StatelessWidget {
   const MyCourseView({super.key});

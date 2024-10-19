@@ -1,8 +1,8 @@
-import 'package:Basera/core/models/category.dart';
-import 'package:Basera/core/utility/functions/navigate_functions.dart';
-import 'package:Basera/core/utility/size_config.dart';
-import 'package:Basera/features/category/views/category_courses_view.dart';
-import 'package:Basera/features/category/views/widgets/category_stacked_row.dart';
+import 'package:Mafaheem/core/models/category.dart';
+import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
+import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/features/category/views/category_courses_view.dart';
+import 'package:Mafaheem/features/category/views/widgets/category_stacked_row.dart';
 import 'package:flutter/material.dart';
 
 class CategoryItem extends StatelessWidget {

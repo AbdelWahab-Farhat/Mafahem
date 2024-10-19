@@ -1,5 +1,5 @@
-import 'package:Basera/features/Auth/presentation/manager/forget_password_cubit/forget_password_cubit.dart';
-import 'package:Basera/features/Auth/presentation/views/widgets/forget_password_view_body.dart';
+import 'package:Mafaheem/features/Auth/presentation/manager/forget_password_cubit/forget_password_cubit.dart';
+import 'package:Mafaheem/features/Auth/presentation/views/widgets/forget_password_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

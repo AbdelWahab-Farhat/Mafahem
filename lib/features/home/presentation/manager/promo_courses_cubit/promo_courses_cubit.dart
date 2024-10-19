@@ -1,5 +1,5 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/features/home/data/promo_courses_service.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/features/home/data/promo_courses_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

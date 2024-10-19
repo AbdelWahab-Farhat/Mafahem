@@ -1,7 +1,7 @@
-import 'package:Basera/core/models/course.dart';
-import 'package:Basera/core/utility/styles.dart';
-import 'package:Basera/core/widgets/custom_Tag_text_widget.dart';
-import 'package:Basera/features/road_map/views/widgets/student_with_rate.dart';
+import 'package:Mafaheem/core/models/course.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/core/widgets/custom_Tag_text_widget.dart';
+import 'package:Mafaheem/features/road_map/views/widgets/student_with_rate.dart';
 import 'package:flutter/material.dart';
 
 class RoadMapCourseItem extends StatelessWidget {
