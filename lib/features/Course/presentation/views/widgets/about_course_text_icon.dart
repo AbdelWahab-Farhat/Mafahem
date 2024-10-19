@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
