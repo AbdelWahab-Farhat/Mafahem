@@ -16,7 +16,7 @@ class GetCategoriesService {
     Response res = await Dio().get(Routes.CATEGORY_URL);
       if (res.statusCode == HttpStatus.ok) {
         List<Category> categories = List<Category>.from(
-            res.data['data'].map((item) => Category.fromJson2(item)).toList()
+            res.data['data'].map((item) => Category.fromJson(item)).toList()
         );
         return right(categories);
       } else {
