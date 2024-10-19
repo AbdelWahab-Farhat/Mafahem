@@ -15,7 +15,7 @@ class CheckProgressService {
     try {
       final dio = GetIt.instance.get<Dio>();
       final token = GetIt.instance.get<TokenCubit>().user!.token;
-      final result = await dio.get(
+      final result = await dio.post(
         Routes.MARK_LEACTURE_PROGRESS_COMPLETED(courseId, lessonId, lectureId),
         options: Options(
           headers: {
