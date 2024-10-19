@@ -1,9 +1,14 @@
+import 'dart:developer';
+
+import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/core/widgets/custom_card_list_view_shimmer.dart';
 import 'package:Basera/core/widgets/custom_empty_state_widget.dart';
 import 'package:Basera/core/widgets/custom_error_widget.dart';
 import 'package:Basera/core/widgets/custom_loading_widget.dart';
+import 'package:Basera/features/Course/data/get_course_by_id.dart';
+import 'package:Basera/features/Course/presentation/views/course_view.dart';
 import 'package:Basera/features/profile/presentation/manager/user_cubit/user_cubit.dart';
 import 'package:Basera/features/profile/presentation/views/widgets/profile_card.dart';
 import 'package:flutter/material.dart';
@@ -37,19 +42,29 @@ class MyCourseView extends StatelessWidget {
             padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
             itemBuilder: (BuildContext context, int index) {
               final course = userCubit.userCourses[index];
-              return ProfileCard(
-                title: course.title,
-                subTitle: "التوجه: ${course.level}",
-                image: course.image,
-                leftWidget: Text(
-                  course.createdAt.toString(),
-                  style: Styles.style12(context)
-                      .copyWith(color: Theme.of(context).colorScheme.secondary),
-                ),
-                rightWidget: Text(
-                  'تاريخ الانتهاء:2027/01/01', // Update this accordingly
-                  style: Styles.style12(context)
-                      .copyWith(color: Theme.of(context).colorScheme.secondary),
+              log(course.raters.toString());
+              return GestureDetector(
+                onTap: () async {
+                  // TODO TELL HIM TO GIVE YOU THE FULL COURSE LATER AND NOT USE GET REQUEST
+                  var realCourse = await GetCourseByIdService.getCourseById(course.id.toString());
+                  realCourse.fold((l) => (){}, (r) {
+                    push(context, CourseView(course: r));
+                  });
+                },
+                child: ProfileCard(
+                  title: course.title,
+                  subTitle: "التوجه: ${course.level}",
+                  image: course.image,
+                  leftWidget: Text(
+                    course.createdAt.toString(),
+                    style: Styles.style12(context)
+                        .copyWith(color: Theme.of(context).colorScheme.secondary),
+                  ),
+                  rightWidget: Text(
+                    'تاريخ الانتهاء:2027/01/01', // Update this accordingly
+                    style: Styles.style12(context)
+                        .copyWith(color: Theme.of(context).colorScheme.secondary),
+                  ),
                 ),
               );
             },
