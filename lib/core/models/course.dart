@@ -1,6 +1,7 @@
 import 'package:Basera/core/models/category.dart';
 import 'package:Basera/core/models/lesson.dart';
 import 'package:Basera/core/models/rater.dart';
+import 'package:Basera/core/models/review.dart';
 
 class Course {
   final int id;
@@ -22,6 +23,7 @@ class Course {
   final int enrollmentCount;
   final List<Rater>? raters;
   final List<Lesson>? lessons;
+  final List<Review>? reviews;
   // final SubscriptionPlan subscriptionPlan;
 
   Course({
@@ -44,6 +46,7 @@ class Course {
     required this.enrollmentCount,
     this.raters,
     this.lessons,
+    this.reviews
     // required this.subscriptionPlan,
   });
 
@@ -62,13 +65,10 @@ class Course {
       requirements: json['requirements'],
       createdAt: json['created_at'],
       updatedAt: json['updated_at'],
-      categories: json['categories'] == null
-          ? []
-          : (json['categories'] as List)
-              .map((cat) => Category.fromJson(cat))
+      categories: json['category'] == null ? [] : (json['category'] as List).map((cat) => Category.fromJson(cat))
               .toList(),
       instructorName: json['instructor_name'] ?? '',
-      averageRating: json['averageRating']?.toDouble(),
+      averageRating: json['average_rating'] == null ? 0 : double.tryParse(json['average_rating'].toString()),
       enrollmentCount: json['enrollment_count'] ?? 0,
       raters: json['raters'] == null
           ? []
@@ -80,6 +80,7 @@ class Course {
           : (json['lessons'] as List)
               .map((lesson) => Lesson.fromJson(lesson))
               .toList(),
+      reviews: json['reviews'] == null ? [] : (json['reviews'] as List).map((review) => Review.fromJson(review)).toList(),
     );
   }
 
@@ -99,7 +100,7 @@ class Course {
       'created_at': createdAt,
       'updated_at': updatedAt,
       'instructor_name': instructorName,
-      'categories': categories?.map((cat) => cat.toJson()).toList(),
+      'category': categories?.map((cat) => cat.toJson()).toList(),
     };
   }
 }
