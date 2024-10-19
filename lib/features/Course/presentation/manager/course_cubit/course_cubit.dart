@@ -1,12 +1,8 @@
-import 'dart:developer';
-
 import 'package:Basera/core/enums/course_status.dart';
-import 'package:Basera/core/error/failure.dart';
 import 'package:Basera/core/utility/functions/navigate_functions.dart';
 import 'package:Basera/core/utility/functions/ui_functions.dart';
 import 'package:Basera/features/Course/data/add_to_cart_service.dart';
 import 'package:Basera/features/Course/data/property_service.dart';
-import 'package:Basera/features/Course/presentation/manager/course_cubit/course_cubit.dart';
 import 'package:Basera/features/cart/presentation/views/cart_view.dart';
 import 'package:Basera/features/profile/presentation/views/profile_view.dart';
 import 'package:bloc/bloc.dart';
@@ -17,7 +13,7 @@ part 'course_state.dart';
 
 class CourseCubit extends Cubit<CourseState> {
   String buttonText = 'اضافة للسلة';
-  CourseStatus courseStatus = CourseStatus.notInCart; // The status of the course.
+  CourseStatus courseStatus = CourseStatus.notInCart;
   Function(BuildContext context)? onButtonPressed;
 
   CourseCubit() : super(CourseInitial());
@@ -44,7 +40,7 @@ class CourseCubit extends Cubit<CourseState> {
             onButtonPressed = (BuildContext context) {
               pushReplacement(context, const ProfileView());
             };
-            buttonText = "اذهب للكورس";
+            buttonText = "اذهب لكورساتي";
             courseStatus = CourseStatus.purchased;
             emit(CourseOwned());
             break;

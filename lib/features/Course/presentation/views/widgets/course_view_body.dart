@@ -2,6 +2,7 @@ import 'package:Basera/core/models/course.dart';
 import 'package:Basera/core/utility/size_config.dart';
 import 'package:Basera/core/utility/styles.dart';
 import 'package:Basera/features/Course/presentation/manager/course_cubit/course_cubit.dart';
+import 'package:Basera/features/Course/presentation/manager/filter_courses_cubit/filter_courses_cubit.dart';
 import 'package:Basera/features/Course/presentation/views/about_section.dart';
 import 'package:Basera/features/Course/presentation/views/lecture_section.dart';
 import 'package:Basera/features/Course/presentation/views/similar_courses_section.dart';
@@ -80,7 +81,7 @@ class _CourseViewBodyState extends State<CourseViewBody> {
                   children: [
                     AboutSection(course: widget.course),
                     LectureSection(course: widget.course,),
-                    const SimilarCoursesSection(),
+                     SimilarCoursesSection(course: widget.course,),
                   ],
                 ),
               ),

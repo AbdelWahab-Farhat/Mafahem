@@ -1,6 +1,7 @@
 import 'package:Basera/core/models/course.dart';
 import 'package:Basera/features/Course/presentation/manager/comment_cubit/comment_cubit.dart';
 import 'package:Basera/features/Course/presentation/manager/course_cubit/course_cubit.dart';
+import 'package:Basera/features/Course/presentation/manager/filter_courses_cubit/filter_courses_cubit.dart';
 import 'package:Basera/features/Course/presentation/manager/review_cubit/review_cubit.dart';
 import 'package:Basera/features/Course/presentation/views/widgets/course_view_body.dart';
 import 'package:flutter/material.dart';
@@ -24,8 +25,13 @@ class CourseView extends StatelessWidget {
         BlocProvider(
           create: (context) => CourseCubit(),
         ),
+        BlocProvider(
+          create: (context) => FilterCoursesCubit(),
+        )
       ],
-      child: CourseViewBody(course: course,),
+      child: CourseViewBody(
+        course: course,
+      ),
     );
   }
 }
