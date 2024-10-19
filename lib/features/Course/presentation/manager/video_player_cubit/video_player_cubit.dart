@@ -24,17 +24,14 @@ class VideoPlayerCubit extends Cubit<VideoPlayerState> {
   Future<void> initialize(String url, String courseId, String lessonId, String lectureId) async {
     try {
       emit(VideoPlayerLoading());
-
-      // Get video file from cache or download it
+      log(url);
       final file = await DefaultCacheManager().getSingleFile(url);
 
       // Create VideoPlayerController with the video file
       videoPlayerController = VideoPlayerController.file(file);
-
-      // Initialize video player
       await videoPlayerController!.initialize();
-      log("Video aspect ratio: ${videoPlayerController!.value.aspectRatio}");
-      log(url);
+      
+
 
       // Initialize Chewie controller
       chewieController = ChewieController(
