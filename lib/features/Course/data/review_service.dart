@@ -63,4 +63,5 @@ class ReviewService {
       return left(ServerFailure(message:'${error.response!.data['message']}'));
     }
   }
-  }
+}
+

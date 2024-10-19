@@ -44,6 +44,5 @@ class ReviewCubit extends Cubit<ReviewState> {
     else {
       showCustomSnackBar(context, 'Please Provide us with comment Of You, Thank you');
     }
-
   }
 }
