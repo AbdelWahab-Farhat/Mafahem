@@ -12,7 +12,7 @@ class CustomCardListViewShimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       shrinkWrap: true,
-      itemCount: 3, // Placeholder count
+      itemCount: 5, // Placeholder count
       physics: const ClampingScrollPhysics(),
       padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
       itemBuilder: (BuildContext context, int index) {

@@ -43,7 +43,7 @@ class EditProfileViewBody extends StatelessWidget {
                                CustomAvatarWidget(
                                 imageEnum: cubit.imagePath == "" ? ImageEnum.network : ImageEnum.file,
                                 radius: 50,
-                                 imageUrl: cubit.imagePath == "" ?  cubit2.user!.data.profilePhotoUrl : cubit.imagePath,
+                                 imageUrl: cubit.imagePath == "" ?  cubit2.user!.profilePhotoUrl : cubit.imagePath,
                               ),
                               Positioned(
                                 bottom: 0,

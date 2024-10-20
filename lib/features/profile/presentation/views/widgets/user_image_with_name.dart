@@ -14,7 +14,7 @@ class UserImageWithName extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var tokenCubit = context.read<TokenCubit>();
-    log(tokenCubit.user!.data.profilePhotoUrl.toString());
+    log(tokenCubit.user!.profilePhotoUrl.toString());
 
     return Column(
       children: [
@@ -23,7 +23,7 @@ class UserImageWithName extends StatelessWidget {
           height: 8,
         ),
         Text(
-          tokenCubit.user!.data.name ?? "User",
+          tokenCubit.user!.name ?? "User",
           style: Styles.style20(context).copyWith(
             color: Theme.of(context).colorScheme.onSurface,
             fontFamily: GoogleFonts.changa().fontFamily,

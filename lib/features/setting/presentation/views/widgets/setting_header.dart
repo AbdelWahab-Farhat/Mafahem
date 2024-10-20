@@ -24,7 +24,7 @@ class SettingHeader extends StatelessWidget {
           width: 12,
         ),
         Text(
-          cubit.user!.data.name ?? "",
+          cubit.user!.name ?? "",
           style: Styles.style16(context).copyWith(
             fontWeight: FontWeight.w600,
             fontFamily: GoogleFonts.changa().fontFamily,

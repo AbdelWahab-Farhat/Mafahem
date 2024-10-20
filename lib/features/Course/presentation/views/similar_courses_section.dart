@@ -31,6 +31,7 @@ class _SimilarCoursesSectionState extends State<SimilarCoursesSection> {
         if (state is FilterCoursesFailure) {
           return CustomErrorWidget(text: state.message);
         } else if (state is FilterCoursesSuccess) {
+          filterCoursesCubit.similarCourses.removeWhere((element) => element.id == widget.course.id,);
           if (filterCoursesCubit.similarCourses.isEmpty) {
             return CustomEmptyStateWidget(
                 title: 'لا يوجد كورسات مشابهة',
@@ -41,7 +42,6 @@ class _SimilarCoursesSectionState extends State<SimilarCoursesSection> {
                   height: SizeConfig.screenHeight * 0.3,
                 ));
           }
-          filterCoursesCubit.similarCourses.removeWhere((element) => element.id == widget.course.id,);
           return ListView.builder(
             padding: const EdgeInsets.only(top: 16, left: 20, right: 20),
             itemCount: filterCoursesCubit.similarCourses.length,

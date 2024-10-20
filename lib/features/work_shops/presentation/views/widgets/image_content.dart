@@ -24,6 +24,8 @@ class ImageContent extends StatelessWidget {
         ),
         Text(
           subTitle,
+          maxLines: 1,
+          overflow: TextOverflow.fade,
           style: Styles.style14(context)
               .copyWith(color: Theme.of(context).colorScheme.surface),
         ),

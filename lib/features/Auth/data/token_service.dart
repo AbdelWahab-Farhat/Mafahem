@@ -41,7 +41,7 @@ class TokenService {
           ),
         );
         if (res.statusCode == HttpStatus.ok) {
-          User user = User.fromJson(res.data);
+          User user = User.fromJson(res.data['data']);
           user.token = token;
           return right(user);
         } else {

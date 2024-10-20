@@ -20,6 +20,7 @@ class GetCoursesService {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       }));
+      dio.interceptors.add(LogInterceptor(responseBody: true));
 
       if (res.statusCode == 200 && res.data['data'] != null && res.data['data']['courses'] != null) {
         List<Course> courses = List<Course>.from(

@@ -29,7 +29,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: 40,
             height: 40,
             child: CachedNetworkImage(
-                imageUrl: tokenCubit.user!.data.profilePhotoUrl,
+                imageUrl: tokenCubit.user!.profilePhotoUrl,
               placeholder: (context, url) => Image.asset('lib/assets/images/Avatar.png'),
               errorWidget: (context, url, error) => Image.asset('lib/assets/images/Avatar.png'),
             )),
@@ -39,7 +39,7 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            tokenCubit.user?.data?.name ?? "User",
+            tokenCubit.user?.name ?? "User",
             style: Styles.style16(context).copyWith(
                 color: Theme.of(context).colorScheme.onSurface,
                 fontWeight: FontWeight.w600,

@@ -5,6 +5,8 @@ import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.da
 import 'package:Mafaheem/features/Auth/presentation/views/auth_guard.dart';
 import 'package:Mafaheem/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:Mafaheem/features/setting/presentation/manager/Theme_cubit/theme_cubit.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/work_shop_detail_view.dart';
+import 'package:Mafaheem/features/work_shops/presentation/views/work_shops_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

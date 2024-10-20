@@ -19,7 +19,7 @@ class EditProfileCubit extends Cubit<EditProfileState> {
 
   void _fillControllers(){
     var user = GetIt.instance.get<TokenCubit>().user;
-    controllerUserName.text = user!.data.name;
+    controllerUserName.text = user!.name;
 
   }
 

@@ -18,7 +18,8 @@ class LoginService {
         data: {"email": email, "password": password},
       );
       if (res.statusCode == HttpStatus.ok) {
-        User user = User.fromJson(res.data);
+        User user = User.fromJson(res.data['data']);
+        user.token = res.data['token'];
         // if (user.data?.emailVerifiedAt == null) {
         //   return left(ServerFailure(message: 'Please Verify Your Email First'));
         // }

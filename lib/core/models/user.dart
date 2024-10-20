@@ -1,56 +1,22 @@
 class User {
-  bool status;
-  String message;
-  UserData data;
+  final int id;
+  final String name;
+  final String email;
+  final String? emailVerifiedAt;
+  final String? twoFactorConfirmedAt;
+  final int? currentTeamId;
+  final String? profilePhotoPath;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final String? image;
+  final String? googleId;
+  final String? facebookId;
+  final String role;
+  final String profilePhotoUrl;
+  final bool? instructor;
   String? token;
 
   User({
-    required this.status,
-    required this.message,
-    required this.data,
-    required this.token,
-  });
-
-  factory User.fromJson(Map<String, dynamic> json) {
-    return User(
-      status: json['status'] == 'true' ? true : false,
-      message: json['message'],
-      data: UserData.fromJson(json['data']),
-      token: json['token'],
-    );
-  }
-  factory User.fromJsonToken(Map<String, dynamic> json) {
-    return User(
-      status: json['status'],
-      message: json['message'],
-      data: UserData.fromJson(json['data']),
-      token: json['token'],
-    );
-  }
-
-  Map<String, dynamic> toJson() {
-    return {
-      'status': status,
-      'message': message,
-      'data': data.toJson(),
-      'token': token,
-    };
-  }
-}
-
-class UserData {
-  int id;
-  String name;
-  String email;
-  String? emailVerifiedAt;
-  String? twoFactorConfirmedAt;
-  String? currentTeamId;
-  String? profilePhotoPath;
-  String createdAt;
-  String updatedAt;
-  String profilePhotoUrl;
-
-  UserData({
     required this.id,
     required this.name,
     required this.email,
@@ -60,11 +26,19 @@ class UserData {
     this.profilePhotoPath,
     required this.createdAt,
     required this.updatedAt,
+    this.image,
+    this.googleId,
+    this.facebookId,
+    required this.role,
     required this.profilePhotoUrl,
+    this.instructor,
+    this.token,
   });
 
-  factory UserData.fromJson(Map<String, dynamic> json) {
-    return UserData(
+  // Factory constructor to create a User instance from JSON
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      token: json['token'],
       id: json['id'],
       name: json['name'],
       email: json['email'],
@@ -72,12 +46,18 @@ class UserData {
       twoFactorConfirmedAt: json['two_factor_confirmed_at'],
       currentTeamId: json['current_team_id'],
       profilePhotoPath: json['profile_photo_path'],
-      createdAt: json['created_at'],
-      updatedAt: json['updated_at'],
+      createdAt: DateTime.parse(json['created_at']),
+      updatedAt: DateTime.parse(json['updated_at']),
+      image: json['image'],
+      googleId: json['google_id'],
+      facebookId: json['facebook_id'],
+      role: json['role'],
       profilePhotoUrl: json['profile_photo_url'],
+      instructor: json['instructor'],
     );
   }
 
+  // Method to convert a User instance to JSON
   Map<String, dynamic> toJson() {
     return {
       'id': id,
@@ -87,9 +67,15 @@ class UserData {
       'two_factor_confirmed_at': twoFactorConfirmedAt,
       'current_team_id': currentTeamId,
       'profile_photo_path': profilePhotoPath,
-      'created_at': createdAt,
-      'updated_at': updatedAt,
+      'created_at': createdAt.toIso8601String(),
+      'updated_at': updatedAt.toIso8601String(),
+      'image': image,
+      'google_id': googleId,
+      'facebook_id': facebookId,
+      'role': role,
       'profile_photo_url': profilePhotoUrl,
+      'instructor': instructor,
+      'token': token
     };
   }
 }
