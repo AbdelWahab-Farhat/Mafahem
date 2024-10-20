@@ -1,4 +1,5 @@
 import 'package:Mafaheem/core/models/work_shop.dart';
+import 'package:Mafaheem/features/work_shops/data/checking_registertion.dart';
 import 'package:Mafaheem/features/work_shops/data/register_on_work_shop_service.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
@@ -7,7 +8,10 @@ part 'register_on_work_shop_state.dart';
 
 class RegisterOnWorkShopCubit extends Cubit<RegisterOnWorkShopState> {
   final WorkShop workShop;
-  RegisterOnWorkShopCubit(this.workShop) : super(RegisterOnWorkShopInit());
+  late final bool isUserRegistered;
+  RegisterOnWorkShopCubit(this.workShop) : super(RegisterOnWorkShopInit()){
+    checkingUserRegistration();
+  }
 
   Future<void> registerOnWorkShop() async {
     emit(RegisterOnWorkShopLoading());
@@ -18,5 +22,12 @@ class RegisterOnWorkShopCubit extends Cubit<RegisterOnWorkShopState> {
         emit(RegisterOnWorkShopSuccess(successMessage: successMessage));
       },
     );
+  }
+
+  Future<void> checkingUserRegistration() async {
+    emit(RegisterOnWorkShopLoading());
+    var result = await CheckingRegistrationService.checkingRegistration(workShop.id.toString());
+    isUserRegistered = result;
+    emit(RegisterOnWorkShopInit());
   }
 }
