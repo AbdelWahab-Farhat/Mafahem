@@ -4,7 +4,6 @@ import 'package:Mafaheem/features/work_shops/presentation/views/widgets/header_s
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/instructor_section.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/related_work_shop_section.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/sign_now_button.dart';
-import 'package:Mafaheem/features/work_shops/presentation/views/widgets/work_shop_detail_view_body.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,12 +1,15 @@
 import 'package:Mafaheem/core/models/work_shop.dart';
 import 'package:Mafaheem/core/utility/functions/navigate_functions.dart';
 import 'package:Mafaheem/core/utility/size_config.dart';
+import 'package:Mafaheem/core/utility/styles.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/date_badge_widget.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/overlay.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/widgets/work_shop_item_content.dart';
 import 'package:Mafaheem/features/work_shops/presentation/views/work_shop_detail_view.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:shimmer/shimmer.dart';
 
 class WorkShopItem extends StatelessWidget {
   final WorkShop workShopCoverItem;
@@ -27,11 +30,14 @@ class WorkShopItem extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // TODO WAIT YOUSSEF TO ADD THE IMAGE
-            Image.asset(
-              'lib/assets/images/testing-work-shops.jpg',
-              fit: BoxFit.cover,
-              width: SizeConfig.screenWidth,
+            CachedNetworkImage(imageUrl: workShopCoverItem.image!,
+            placeholder: (context, url) => Shimmer(
+              gradient: Styles.customLinerGradient(context),
+              child: const SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+              ),
+            ),
             ),
             const OverlayLayerWidget(),
              Positioned(

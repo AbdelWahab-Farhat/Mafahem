@@ -14,7 +14,7 @@ class WorkShop {
   final double? longitude;
   final DateTime createdAt;
   final DateTime updatedAt;
-  final int seatsLeft;
+  final int? seatsLeft;
   final List<Category> categories;
 
   WorkShop({
@@ -53,7 +53,7 @@ class WorkShop {
           ? List<Category>.from(
               json['categories'].map((category) => Category.fromJson(category)))
           : [],
-      seatsLeft: json['seats_left'],
+      seatsLeft: json['seats_left'] ?? 0,
       image: json['image'] ??
           'https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     );
