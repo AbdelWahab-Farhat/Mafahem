@@ -23,6 +23,7 @@ abstract class Routes {
   static const String GET_USER_COURES_URL ="$BASE_URL/users/courses/get";
   static const String GET_WORK_SHOPS_URL = "$BASE_URL/workshops";
  static const String GET_INSTRUCTORS_URL = "$BASE_URL/instructors";
+ static const String GET_USER_WORK_SHOP_URL = "$BASE_URL/user/workshops";
   static String MARK_LEACTURE_PROGRESS_COMPLETED(String courseId , String lessonId , String lectureId) {
       return '$BASE_URL/courses/$courseId/lessons/$lessonId/lectures/$lessonId/complete';
   }
