@@ -34,8 +34,6 @@ class WorkShopItem extends StatelessWidget {
             placeholder: (context, url) => Shimmer(
               gradient: Styles.customLinerGradient(context),
               child: const SizedBox(
-                width: double.infinity,
-                height: double.infinity,
               ),
             ),
             ),

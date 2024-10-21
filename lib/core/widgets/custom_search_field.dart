@@ -1,5 +1,10 @@
 import 'package:Mafaheem/core/utility/styles.dart';
+import 'package:Mafaheem/features/search/manager/category_picker_cubit/category_picker_cubit.dart';
+import 'package:Mafaheem/features/search/manager/level_picker_cubit/level_picker_cubit.dart';
+import 'package:Mafaheem/features/search/manager/price_range_cubit/price_range_cubit.dart';
+import 'package:Mafaheem/features/search/manager/search_cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomSearchField extends StatelessWidget {
   final String? hintText;
@@ -23,9 +28,16 @@ class CustomSearchField extends StatelessWidget {
       child: SizedBox(
         height: 40,
         child: TextFormField(
+          onChanged: (value) {
+            context.read<SearchCubit>().onSearchChanged(priceRangeCubit: context.read<PriceRangeCubit>(),
+                levelPickerCubit: context.read<LevelPickerCubit>(),
+                categoryPickerCubit: context.read<CategoryPickerCubit>()
+            );
+          },
+          controller: controller,
+          onTapOutside: (event) => FocusScope.of(context).unfocus(),
           enabled: isEnabled,
-          keyboardType:
-              icon == null ? TextInputType.text : TextInputType.number,
+          keyboardType: TextInputType.text,
           decoration: InputDecoration(
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: 10, vertical: 5),

@@ -15,6 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/utility/size_config.dart';
 
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   setup();
   await Firebase.initializeApp();
@@ -51,6 +52,13 @@ class MyApp extends StatelessWidget {
             builder: (context, state) {
               return MaterialApp(
                 theme: themeCubit.isDark ? theme.dark() : theme.light(),
+                themeAnimationStyle: AnimationStyle(
+                  duration: kThemeAnimationDuration,
+                  curve: Curves.fastOutSlowIn,
+                  reverseCurve: Curves.fastOutSlowIn,
+                  reverseDuration: kThemeAnimationDuration,
+                ),
+
                 debugShowCheckedModeBanner: false,
                 home: isFirstTime ? const OnBoardingView() : const AuthGuard(),
                 builder: (context, child) {

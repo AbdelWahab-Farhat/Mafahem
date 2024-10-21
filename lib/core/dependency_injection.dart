@@ -1,5 +1,8 @@
 import 'package:Mafaheem/core/apis/firebase_upload_api.dart';
 import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
+import 'package:Mafaheem/features/search/manager/category_picker_cubit/category_picker_cubit.dart';
+import 'package:Mafaheem/features/search/manager/level_picker_cubit/level_picker_cubit.dart';
+import 'package:Mafaheem/features/search/manager/price_range_cubit/price_range_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:get_it/get_it.dart';
@@ -27,5 +30,4 @@ void setup() {
   getIt.registerSingleton<Dio>(dio);
   getIt.registerSingleton<TokenCubit>(TokenCubit());
   getIt.registerSingleton<FirebaseUploadApi>(FirebaseUploadApi());
-
 }

@@ -1,12 +1,17 @@
+import 'package:Mafaheem/core/models/course.dart';
 import 'package:Mafaheem/features/search/views/widgets/search_grid_item_lower_content.dart';
 import 'package:Mafaheem/features/search/views/widgets/search_grid_item_upper_content.dart';
 import 'package:Mafaheem/features/search/views/widgets/tag_widget.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class SearchGridItem extends StatelessWidget {
-  final int index;
+  final Course course;
+
   const SearchGridItem({
-    super.key, required this.index,
+    super.key,
+    required this.course,
   });
 
   @override
@@ -15,6 +20,7 @@ class SearchGridItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
         color: Theme.of(context).colorScheme.surface,
+        border: Border.all(width: 0.1, color: Theme.of(context).colorScheme.onSurface),
         boxShadow: [
           BoxShadow(
               color: Theme.of(context).shadowColor.withOpacity(0.2),
@@ -30,20 +36,28 @@ class SearchGridItem extends StatelessWidget {
           // Use Flexible to fit the available space
           AspectRatio(
             aspectRatio: 3 / 2,
-            child: Image.asset(
-              'lib/assets/images/Roadmap-to-Learn-JavaScript-For-Beginners 1.png',
-              fit: BoxFit.cover,
+            child: CachedNetworkImage(
+              imageUrl: course.image,
+              placeholder: (context, url) => Shimmer.fromColors(
+                baseColor: Colors.grey.shade300,
+                highlightColor: Colors.grey.shade100,
+                child: Container(
+                  width: double.infinity,
+                  height: double.infinity,
+                  color: Colors.white,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 8),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
-            child: GridItemUpperContent(),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: GridItemUpperContent(course:course),
           ),
           const SizedBox(height: 16),
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8),
-            child: GridItemLowerContent(),
+           Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: GridItemLowerContent(course:course),
           ),
           Divider(
             color: Theme.of(context).colorScheme.secondary.withOpacity(0.4),
@@ -55,10 +69,8 @@ class SearchGridItem extends StatelessWidget {
               runSpacing: 8,
               spacing: 8,
               children: [
-                TagWidget(title: 'ثانوي', color: Colors.blue),
-               TagWidget(title: 'برمجة', color: Colors.red),
-               TagWidget(title: 'برمجة', color: Colors.red),
-                TagWidget(title: 'برمجة', color: Colors.red),
+                for (var category in course.categories!)
+                  TagWidget(title: category.name, color: Colors.blue),
               ],
             ),
           ),

@@ -1,7 +1,11 @@
 import 'package:Mafaheem/core/utility/size_config.dart';
 import 'package:Mafaheem/core/widgets/custom_icon_button.dart';
 import 'package:Mafaheem/core/widgets/custom_search_field.dart';
+import 'package:Mafaheem/features/search/manager/price_range_cubit/price_range_cubit.dart';
+import 'package:Mafaheem/features/search/manager/search_cubit/search_cubit.dart';
+import 'package:Mafaheem/features/search/views/filter_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SearchSection extends StatelessWidget {
   const SearchSection({
@@ -13,7 +17,7 @@ class SearchSection extends StatelessWidget {
     return Row(
       children: [
         CustomIconButton(
-          onPressed: () {},
+          onPressed: () =>showFilterBottomSheet(context),
           title: "فلترة",
           textColor: Theme.of(context).colorScheme.surface,
           fontWeight: FontWeight.w600,
@@ -26,6 +30,7 @@ class SearchSection extends StatelessWidget {
         const SizedBox(width: 16,),
         Expanded(child: CustomSearchField(
           isEnabled: true,
+          controller: context.read<SearchCubit>().searchController,
           hintText: 'ابحث عن محتوى تعليمي',
           icon: Container(
               decoration: BoxDecoration(

@@ -1,9 +1,11 @@
+import 'package:Mafaheem/core/models/course.dart';
 import 'package:Mafaheem/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 class GridItemLowerContent extends StatelessWidget {
+  final Course course;
   const GridItemLowerContent({
-    super.key,
+    super.key, required this.course,
   });
 
   @override
@@ -14,12 +16,12 @@ class GridItemLowerContent extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'للمبتدئين',
+            course.level,
             style: Styles.style14(context).copyWith(
                 color: Theme.of(context).colorScheme.primary),
           ),
           Text(
-            '20 د.ل',
+            '${course.price} د.ل',
             style: Styles.style16(context).copyWith(
                 color: Theme.of(context).colorScheme.onSurface,
                 fontWeight: FontWeight.bold),

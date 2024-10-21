@@ -1,9 +1,11 @@
+import 'package:Mafaheem/core/models/course.dart';
 import 'package:Mafaheem/core/utility/styles.dart';
 import 'package:flutter/material.dart';
 
 class GridItemUpperContent extends StatelessWidget {
+  final Course course;
   const GridItemUpperContent({
-    super.key,
+    super.key, required this.course,
   });
 
   @override
@@ -14,14 +16,14 @@ class GridItemUpperContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'تعلم جافا سكريبت',
+            course.title,
             overflow: TextOverflow.ellipsis,
             maxLines: 2,
             style: Styles.style16(context)
                 .copyWith(fontWeight: FontWeight.w600),
           ),
           Text(
-            'المدرب : يوسف مراعش',
+            'المدرب : ${course.instructorName}',
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
             style: Styles.style14(context).copyWith(

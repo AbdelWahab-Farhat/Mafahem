@@ -7,6 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
+// TODO: CHANGE THE NAME LATER
 class GetCoursesService {
   static Future<Either<Failure, List<Course>>> fetchCoursesByCourseCategory(List<Category> courseCategories) async {
     log(courseCategories.toString());

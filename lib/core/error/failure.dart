@@ -18,3 +18,7 @@ class CancelledFailure extends Failure{
 class FirebaseFailure extends Failure{
   FirebaseFailure({required super.message});
 }
+
+class UnknownFailure extends Failure{
+  UnknownFailure({required super.message});
+}
