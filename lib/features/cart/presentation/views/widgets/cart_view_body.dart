@@ -4,6 +4,7 @@ import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
 import 'package:Mafaheem/core/widgets/custom_card_list_view_shimmer.dart';
 import 'package:Mafaheem/core/widgets/custom_empty_state_widget.dart';
 import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
+import 'package:Mafaheem/features/cart/data/bill_service.dart';
 import 'package:Mafaheem/features/cart/presentation/manager/cart_cubit/cart_cubit.dart';
 import 'package:Mafaheem/features/cart/presentation/manager/coupon_cubit/coupon_cubit.dart';
 import 'package:Mafaheem/features/cart/presentation/manager/scroll_cubit/scroll_cubit.dart';
@@ -11,6 +12,8 @@ import 'package:Mafaheem/features/cart/presentation/views/widgets/bill_section.d
 import 'package:Mafaheem/features/cart/presentation/views/widgets/cart_list_view.dart';
 import 'package:Mafaheem/features/cart/presentation/views/widgets/custom_discount_text_field.dart';
 import 'package:Mafaheem/features/cart/presentation/views/widgets/custom_scroll_button.dart';
+import 'package:Mafaheem/features/payment/data/payment_item_type.dart';
+import 'package:Mafaheem/features/payment/presentation/views/payment_view_sheet.dart';
 import 'package:Mafaheem/features/root/presentation/views/root_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -120,7 +123,12 @@ class _CartViewBodyState extends State<CartViewBody> {
                     CustomFilledButton(
                       title: 'تأكيد الطلب',
                       onPressed: () {
-                        // تنفيذ الإجراء لتأكيد الطلب
+                        showPaymentViewSheet(
+                            context,
+                            BillService.totalPrice(courses),
+                            PaymentItemType.courses,
+                            couponCubit.coupon,
+                            null);
                       },
                       height: 60,
                       color: Theme.of(context).colorScheme.onSurface,

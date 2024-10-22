@@ -1,18 +1,18 @@
 class User {
   final int id;
-  final String name;
-  final String email;
+   String name;
+   String email;
   final String? emailVerifiedAt;
   final String? twoFactorConfirmedAt;
   final int? currentTeamId;
-  final String? profilePhotoPath;
+   String? profilePhotoPath;
   final DateTime createdAt;
   final DateTime updatedAt;
   final String? image;
   final String? googleId;
   final String? facebookId;
   final String role;
-  final String profilePhotoUrl;
+   String profilePhotoUrl;
   final bool? instructor;
   String? token;
 

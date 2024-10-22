@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:shimmer/shimmer.dart';
 
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({
@@ -29,9 +30,22 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
             width: 40,
             height: 40,
             child: CachedNetworkImage(
-                imageUrl: tokenCubit.user!.profilePhotoUrl,
-              placeholder: (context, url) => Image.asset('lib/assets/images/Avatar.png'),
-              errorWidget: (context, url, error) => Image.asset('lib/assets/images/Avatar.png'),
+              imageUrl: tokenCubit.user!.profilePhotoUrl,
+              placeholder: (context, url) {
+                return Shimmer.fromColors(
+                    baseColor: Colors.grey[300]!,
+                    highlightColor: Colors.grey[100]!,
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+                    ));
+              },
+              errorWidget: (context, url, error) =>
+                  Image.asset('lib/assets/images/default-avatar-image.png',fit: BoxFit.cover,),
             )),
       ),
       title: Column(

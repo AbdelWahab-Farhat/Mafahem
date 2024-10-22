@@ -34,7 +34,7 @@ class ToggleProfileViews extends StatelessWidget {
         animate: true,
         animationDuration: 450,
         totalSwitches: 3,
-        labels: const ['كورسات مكتملة', 'مساراتي العلمية', 'شهاداتي'],
+        labels: const ['كورساتي', 'مساراتي العلمية', 'شهاداتي'],
         radiusStyle: true,
         activeBgColor: [Theme.of(context).colorScheme.primary],
         onToggle: (index) {

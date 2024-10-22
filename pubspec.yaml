@@ -57,4 +57,6 @@ flutter:
     - lib/assets/images/
     - lib/assets/animation/sent-email-animation.json
     - lib/assets/animation/error-animation.json
+    - lib/assets/animation/payment-done-animation.json
+    - lib/assets/animation/success.json
 

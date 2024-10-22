@@ -1,16 +1,13 @@
-import 'package:Mafaheem/core/enums/image_enum.dart';
-import 'package:Mafaheem/core/utility/functions/validate_functions.dart';
 import 'package:Mafaheem/core/utility/size_config.dart';
 import 'package:Mafaheem/core/widgets/custom_app_bar.dart';
-import 'package:Mafaheem/core/widgets/custom_avatar_widget.dart';
-import 'package:Mafaheem/core/widgets/custom_filled_button.dart';
-import 'package:Mafaheem/core/widgets/custom_textfield.dart';
 import 'package:Mafaheem/features/Auth/presentation/manager/token/token_cubit.dart';
 import 'package:Mafaheem/features/profile_edit/presentation/manager/edit_profile_cubit.dart';
+import 'package:Mafaheem/features/profile_edit/presentation/views/widgets/edit_profile_image_section.dart';
+import 'package:Mafaheem/features/profile_edit/presentation/views/widgets/edit_profile_submit_button.dart';
+import 'package:Mafaheem/features/profile_edit/presentation/views/widgets/edit_profile_text_field_sections.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_it/get_it.dart';
 
 class EditProfileViewBody extends StatelessWidget {
@@ -23,110 +20,38 @@ class EditProfileViewBody extends StatelessWidget {
     return Scaffold(
       appBar: const CustomAppBar(title: 'تعديل الحساب'),
       body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        margin: const EdgeInsets.only(left: 20, right: 20, top: 40),
         child: Form(
           key: cubit.formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  BlocBuilder<EditProfileCubit, EditProfileState>(
-                    builder: (context, state) {
-                      return ClipOval(
-                        // Clipping the entire stack to keep it circular
-                        child: GestureDetector(
-                          onTap: () => cubit.changeUserImage(),
-                          child: Stack(
-                            children: [
-                               CustomAvatarWidget(
-                                imageEnum: cubit.imagePath == "" ? ImageEnum.network : ImageEnum.file,
-                                radius: 50,
-                                 imageUrl: cubit.imagePath == "" ?  cubit2.user!.profilePhotoUrl : cubit.imagePath,
-                              ),
-                              Positioned(
-                                bottom: 0,
-                                left: 0,
-                                right: 0,
-                                child: Container(
-                                  width: SizeConfig.screenWidth,
-                                  height: 25,
-                                  decoration: BoxDecoration(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .secondary
-                                        .withOpacity(0.2),
-                                  ),
-                                  child: Icon(
-                                    FontAwesomeIcons.camera,
-                                    color:
-                                        Theme.of(context).colorScheme.secondary,
-                                    size: 17,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-              CustomTextField(
-                label: 'اسم المستخدم',
-                validator: validateUsername,
-                controller: cubit.controllerUserName,
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomTextField(
-                label: 'كلمة المرور',
-                validator: validatePassword,
-                controller: cubit.controllerUserPassword,
-                icon: const Icon(
-                  FontAwesomeIcons.eyeSlash,
-                  size: 17,
+          child: SingleChildScrollView(
+            physics: const RangeMaintainingScrollPhysics(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    EditProfileImageSection(cubit: cubit, cubit2: cubit2),
+                  ],
                 ),
-              ),
-              const SizedBox(
-                height: 16,
-              ),
-              CustomTextField(
-                label: 'تأكيد كلمة المرور',
-                validator: (value) {
-                   if (value != cubit.controllerUserPassword.text) {
-                     return "كلمة المرور غير متطابقة";
-                   }
-                   return null;
-                },
-                controller: cubit.controllerUserConfirmPassword,
-                icon: const Icon(
-                  FontAwesomeIcons.eyeSlash,
-                  size: 17,
+                EditProfileTextFieldSections(cubit: cubit),
+                const EditProfileSubmitButton(),
+                SizedBox(
+                  height: SizeConfig.screenHeight * 0.05,
                 ),
-              ),
-              const SizedBox(
-                height: 36,
-              ),
-              CustomFilledButton(
-                title: 'تأكيد',
-                textColor: Theme.of(context).colorScheme.onPrimary,
-                onPressed: () {
-                },
-              ),
-              const Spacer(),
-              SvgPicture.asset(
-                'lib/assets/icons/logo.svg',
-                width: 100,
-                height: 100,
-              ),
-            ],
+                SvgPicture.asset(
+                  'lib/assets/icons/logo.svg',
+                  width: 100,
+                  height: 100,
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+
+

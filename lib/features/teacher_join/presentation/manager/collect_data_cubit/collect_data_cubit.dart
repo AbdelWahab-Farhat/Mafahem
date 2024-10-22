@@ -33,8 +33,7 @@ class CollectDataCubit extends Cubit<CollectDataState> {
     }
     if (_validateAndSave()) {
       emit(CollectDataSending());
-      var path = await GetIt.instance
-          .get<FirebaseUploadApi>()
+      var path = await FirebaseUploadApi
           .uploadAndGetURL(uploadedFilePath);
       path.fold(
         (failure) =>

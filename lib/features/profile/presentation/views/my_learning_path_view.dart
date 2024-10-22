@@ -38,8 +38,7 @@ class MyLearningPathView extends StatelessWidget {
               return ProfileCard(
                 title: userRoadMap.title,
                 subTitle: userRoadMap.description,
-                image:
-                    'https://oaustech.edu.ng/media/k2/items/cache/5288462d048e0d3f60f64bb84cff6df4_M.jpg',
+                image:userRoadMap.courses[0].image,
                 //TODO: CHANGE IT TO REAL PERCENTAGE LATER.
                 rightWidget: Text(
                   "100%",
@@ -48,9 +47,10 @@ class MyLearningPathView extends StatelessWidget {
                 ),
                 leftWidget: SizedBox(
                     width: SizeConfig.screenWidth * 0.8,
+                    height: 15,
                     child: const LinearProgressIndicator(
                       borderRadius: BorderRadius.all(Radius.circular(32)),
-                      value: 0.7,
+                      value: 0.1,
                       minHeight: 8,
                     )),
               );

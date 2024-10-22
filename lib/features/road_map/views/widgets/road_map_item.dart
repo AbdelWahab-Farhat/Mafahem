@@ -20,7 +20,7 @@ class RoadMapItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => push(context, RoadMapCoursesView(courses: roadMap.courses,)),
+      onTap: () => push(context, RoadMapCoursesView(courses: roadMap.courses, roadMap: roadMap,)),
       child: Container(
         margin: const EdgeInsets.only(bottom: 24),
         width: SizeConfig.screenWidth,
@@ -53,7 +53,7 @@ class RoadMapItem extends StatelessWidget {
                 title: roadMap.title,
                 rating: 4.3,
                 subtitle: roadMap.description,
-                price: "${CalculateRoadMapService.calculateLearnPath(roadMap).toStringAsFixed(1)} د.ل",
+                price: "${CalculateRoadMapService.calculateRoadMapFullPrice(roadMap).toStringAsFixed(1)} د.ل",
               ),
             ),
           ],

@@ -45,7 +45,13 @@ class RoadMapCourseItem extends StatelessWidget {
                 const SizedBox(height: 4),
                 CustomTagTextWidget(text: course.level,color: Theme.of(context).colorScheme.onSurface,),
                 const SizedBox(height: 4),
-                 const StudentWithRate(rate: 3.6,studentCount: 1004,),
+                 Row(
+                   children: [
+                     const StudentWithRate(rate: 3.6,studentCount: 1004,),
+                     SizedBox(width: 8,),
+                     Text("${course.price}د.ل",style: Styles.style14(context).copyWith(fontWeight: FontWeight.bold),)
+                   ],
+                 ),
               ],
             ),
           ),

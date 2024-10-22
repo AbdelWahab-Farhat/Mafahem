@@ -11,9 +11,16 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 final getIt = GetIt.instance;
 
 void setup() {
+  getIt.registerSingleton<TokenCubit>(TokenCubit());
+
   Dio dio = Dio(
-    BaseOptions(connectTimeout: const Duration(seconds: 5),
+    BaseOptions(connectTimeout: const Duration(seconds: 6,),
       contentType: 'application/json',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ${GetIt.instance.get<TokenCubit>().user?.token}',
+      }
     ),
   );
   dio.interceptors.addAll([
@@ -28,6 +35,5 @@ void setup() {
     ),
   ]);
   getIt.registerSingleton<Dio>(dio);
-  getIt.registerSingleton<TokenCubit>(TokenCubit());
   getIt.registerSingleton<FirebaseUploadApi>(FirebaseUploadApi());
 }

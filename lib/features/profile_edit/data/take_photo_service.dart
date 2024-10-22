@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:image_picker/image_picker.dart';
 
 class TakePhotoService {
@@ -14,7 +16,7 @@ class TakePhotoService {
         return null;
       }
     } catch (e) {
-      print('Error picking image: $e');
+      log('Error picking image: $e');
       return null;
     }
   }

@@ -1,0 +1,6 @@
+
+
+enum PaymentItemType {
+  roadMap,
+  courses
+}

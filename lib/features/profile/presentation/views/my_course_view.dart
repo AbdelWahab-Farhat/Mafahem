@@ -52,15 +52,11 @@ class MyCourseView extends StatelessWidget {
                   subTitle: "التوجه: ${course.level}",
                   image: course.image,
                   leftWidget: Text(
-                    course.createdAt.toString(),
+                    '${(course.duration / 60).toStringAsFixed(0)} سـاعات',
                     style: Styles.style12(context)
                         .copyWith(color: Theme.of(context).colorScheme.secondary),
                   ),
-                  rightWidget: Text(
-                    'تاريخ الانتهاء:2027/01/01', // Update this accordingly
-                    style: Styles.style12(context)
-                        .copyWith(color: Theme.of(context).colorScheme.secondary),
-                  ),
+                  rightWidget: SizedBox(),
                 ),
               );
             },

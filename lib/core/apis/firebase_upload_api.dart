@@ -5,7 +5,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 
 class FirebaseUploadApi {
-  Future<Either<Failure, String>> uploadAndGetURL(File file) async {
+  static Future<Either<Failure, String>> uploadAndGetURL(File file) async {
     try {
       // Create a reference to Firebase Storage
       final storageRef = FirebaseStorage.instance.ref().child('uploads/${file.path.split('/').last}');

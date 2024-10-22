@@ -53,6 +53,7 @@ class CustomFilledButton extends StatelessWidget {
                 fontSize: fontSize,
                 fontWeight: fontWeight,
               ),
+              textAlign: TextAlign.center,
             ),
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:Mafaheem/features/category/views/category_view.dart';
 import 'package:Mafaheem/features/home/presentation/views/home_view.dart';
+import 'package:Mafaheem/features/private_courses/presentation/views/private_lesson_view.dart';
 import 'package:Mafaheem/features/road_map/views/road_map_view.dart';
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:bloc/bloc.dart';
@@ -14,10 +15,10 @@ class NavigateCubit extends Cubit<NavigateState> {
   int currentIndex = 0;
   final NotchBottomBarController notchBottomBarController = NotchBottomBarController();
   List<Widget> views = [
-    HomeView(),
-    HomeView(),
-    RoadMapView(),
-    CategoryView()
+    const HomeView(),
+    const PrivateLessonView(),
+    const RoadMapView(),
+    const CategoryView()
 
   ];
   NavigateCubit() : super(NavigateInitial());
